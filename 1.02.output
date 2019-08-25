@@ -1,11 +1,11 @@
-Script started on 2019-08-25 15:20:34+0300
+Script started on 2019-08-25 15:57:41+0300
 ++ docker ps --all --quiet
-+ docker stop 3b881bce2827 e73a92f795ed 256661c7d175
++ docker stop 722cfaac954b 3f36ed251b9d 2604e96ba563
 + docker system prune --volumes --all --force
 Deleted Containers:
-3b881bce2827de6056af77117ac70185050a621267cb4f17649807d2a5914308
-e73a92f795ed3199ee8df4920c4ad8d15e7b64b679ea228a7ba588fae51b9b2e
-256661c7d175b9b7f9dd67da9f2f0013f4db3c3c7ec9c02e8903517325836f7b
+722cfaac954bf667c70eec3cc3b7540f7dfbfb485e4026c51d0ed94e348c271c
+3f36ed251b9d720b92e0b3dffd06099a2033452e1ecd3f251e01e36352eb7ce9
+2604e96ba563a0cde5df6226a8693f352244d120d26fe0ed2bcd4dde25cc123b
 
 Deleted Images:
 untagged: nginx:latest
@@ -21,4 +21,4 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 + docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 
-Script done on 2019-08-25 15:20:36+0300
+Script done on 2019-08-25 15:57:42+0300
