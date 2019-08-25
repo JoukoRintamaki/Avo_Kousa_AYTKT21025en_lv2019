@@ -1,0 +1,14 @@
+Script started on 2019-08-25 17:15:35+0300
++ docker run --detach --name exec_bash_exercise devopsdockeruh/exec_bash_exercise
++ cat
+4ba160533412d9dd4b94eab6627966c894b3ab1f5240a688d1d2e2c0c753543e
++ docker exec exec_bash_exercise timeout 16 tail -f ./logs.txt
+Sun, 25 Aug 2019 14:15:35 GMT
+Sun, 25 Aug 2019 14:15:38 GMT
+Sun, 25 Aug 2019 14:15:41 GMT
+Sun, 25 Aug 2019 14:15:44 GMT
+Secret message is:
+"Docker is easy"
+Sun, 25 Aug 2019 14:15:50 GMT
+
+Script done on 2019-08-25 17:15:52+0300
