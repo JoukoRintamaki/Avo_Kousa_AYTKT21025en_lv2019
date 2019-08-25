@@ -1,0 +1,24 @@
+Script started on 2019-08-25 15:20:34+0300
+++ docker ps --all --quiet
++ docker stop 3b881bce2827 e73a92f795ed 256661c7d175
++ docker system prune --volumes --all --force
+Deleted Containers:
+3b881bce2827de6056af77117ac70185050a621267cb4f17649807d2a5914308
+e73a92f795ed3199ee8df4920c4ad8d15e7b64b679ea228a7ba588fae51b9b2e
+256661c7d175b9b7f9dd67da9f2f0013f4db3c3c7ec9c02e8903517325836f7b
+
+Deleted Images:
+untagged: nginx:latest
+untagged: nginx@sha256:53ddb41e46de3d63376579acf46f9a41a8d7de33645db47a486de9769201fec9
+deleted: sha256:5a3221f0137beb960c34b9cf4455424b6210160fd618c5e79401a07d6e5a2ced
+deleted: sha256:9517458cc6efeca05fee894eb0dda7cda7a704a6469e4624792289c9ff4350c0
+deleted: sha256:963e4580fca3bf364728a7df40a2348939c25213d32508c53849108d05764093
+deleted: sha256:1c95c77433e8d7bf0f519c9d8c9ca967e2603f0defbf379130d9a841cca2e28e
+
+Total reclaimed space: 126MB
++ docker ps --all
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
++ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+Script done on 2019-08-25 15:20:36+0300
