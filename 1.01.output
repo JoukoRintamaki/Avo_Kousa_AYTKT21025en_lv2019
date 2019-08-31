@@ -1,42 +1,35 @@
-Script started on 2019-08-25 15:56:16+0300
+Script started on 2019-08-31 21:42:59+0300
++ docker image pull --quiet nginx
+docker.io/library/nginx:latest
 + docker run --detach --name nginx-01 nginx
-+ cat
-Unable to find image 'nginx:latest' locally
-latest: Pulling from library/nginx
-1ab2bdfe9778: Pulling fs layer
-a17e64cfe253: Pulling fs layer
-e1288088c7a8: Pulling fs layer
-e1288088c7a8: Verifying Checksum
-e1288088c7a8: Download complete
-a17e64cfe253: Verifying Checksum
-a17e64cfe253: Download complete
-1ab2bdfe9778: Verifying Checksum
-1ab2bdfe9778: Download complete
-1ab2bdfe9778: Pull complete
-a17e64cfe253: Pull complete
-e1288088c7a8: Pull complete
-Digest: sha256:53ddb41e46de3d63376579acf46f9a41a8d7de33645db47a486de9769201fec9
-Status: Downloaded newer image for nginx:latest
-2604e96ba563a0cde5df6226a8693f352244d120d26fe0ed2bcd4dde25cc123b
+62f0a8b4e83a46e958da2db523744376a9e4b994165de382dd8a7eb59f6c2b01
 + docker run --detach --name nginx-02 nginx
-+ cat
-3f36ed251b9d720b92e0b3dffd06099a2033452e1ecd3f251e01e36352eb7ce9
+c59cf51661ff62d62cd5e2f1710c2561b7a3634964daa09a4b10cdd7f8e0825b
 + docker run --detach --name nginx-03 nginx
-+ cat
-722cfaac954bf667c70eec3cc3b7540f7dfbfb485e4026c51d0ed94e348c271c
-+ docker ps -a
+48a4a4c74ee25861cb88058df827eaaf1fabaa7c7660076647caf32d9257a3c0
++ docker ps --all
 CONTAINER ID        IMAGE               COMMAND                  CREATED                  STATUS                  PORTS               NAMES
-722cfaac954b        nginx               "nginx -g 'daemon of…"   Less than a second ago   Up Less than a second   80/tcp              nginx-03
-3f36ed251b9d        nginx               "nginx -g 'daemon of…"   1 second ago             Up Less than a second   80/tcp              nginx-02
-2604e96ba563        nginx               "nginx -g 'daemon of…"   2 seconds ago            Up 1 second             80/tcp              nginx-01
+48a4a4c74ee2        nginx               "nginx -g 'daemon of…"   Less than a second ago   Up Less than a second   80/tcp              nginx-03
+c59cf51661ff        nginx               "nginx -g 'daemon of…"   1 second ago             Up Less than a second   80/tcp              nginx-02
+62f0a8b4e83a        nginx               "nginx -g 'daemon of…"   1 second ago             Up 1 second             80/tcp              nginx-01
 + docker stop nginx-01
 nginx-01
 + docker stop nginx-02
 nginx-02
-+ docker ps -a
++ docker ps --all
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                              PORTS               NAMES
-722cfaac954b        nginx               "nginx -g 'daemon of…"   2 seconds ago       Up 1 second                         80/tcp              nginx-03
-3f36ed251b9d        nginx               "nginx -g 'daemon of…"   3 seconds ago       Exited (0) Less than a second ago                       nginx-02
-2604e96ba563        nginx               "nginx -g 'daemon of…"   4 seconds ago       Exited (0) 1 second ago                                 nginx-01
+48a4a4c74ee2        nginx               "nginx -g 'daemon of…"   2 seconds ago       Up 1 second                         80/tcp              nginx-03
+c59cf51661ff        nginx               "nginx -g 'daemon of…"   3 seconds ago       Exited (0) Less than a second ago                       nginx-02
+62f0a8b4e83a        nginx               "nginx -g 'daemon of…"   3 seconds ago       Exited (0) Less than a second ago                       nginx-01
++ source dockercontainerprune.sh
++++ docker ps --all --quiet
+++ docker stop 48a4a4c74ee2 c59cf51661ff 62f0a8b4e83a
+++ docker container prune --force
+Deleted Containers:
+48a4a4c74ee25861cb88058df827eaaf1fabaa7c7660076647caf32d9257a3c0
+c59cf51661ff62d62cd5e2f1710c2561b7a3634964daa09a4b10cdd7f8e0825b
+62f0a8b4e83a46e958da2db523744376a9e4b994165de382dd8a7eb59f6c2b01
 
-Script done on 2019-08-25 15:57:30+0300
+Total reclaimed space: 0B
+
+Script done on 2019-08-31 21:43:06+0300

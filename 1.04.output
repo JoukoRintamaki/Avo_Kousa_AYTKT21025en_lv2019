@@ -1,14 +1,23 @@
-Script started on 2019-08-25 17:15:35+0300
+Script started on 2019-08-31 21:43:09+0300
++ docker image pull --quiet devopsdockeruh/exec_bash_exercise
+docker.io/devopsdockeruh/exec_bash_exercise:latest
 + docker run --detach --name exec_bash_exercise devopsdockeruh/exec_bash_exercise
-+ cat
-4ba160533412d9dd4b94eab6627966c894b3ab1f5240a688d1d2e2c0c753543e
+5f5cd2b6aab3ec6070535355dfa2086041b021f1b9df7d89f0634aaf794a44bb
 + docker exec exec_bash_exercise timeout 16 tail -f ./logs.txt
-Sun, 25 Aug 2019 14:15:35 GMT
-Sun, 25 Aug 2019 14:15:38 GMT
-Sun, 25 Aug 2019 14:15:41 GMT
-Sun, 25 Aug 2019 14:15:44 GMT
+Sat, 31 Aug 2019 18:43:12 GMT
+Sat, 31 Aug 2019 18:43:15 GMT
+Sat, 31 Aug 2019 18:43:18 GMT
+Sat, 31 Aug 2019 18:43:21 GMT
 Secret message is:
 "Docker is easy"
-Sun, 25 Aug 2019 14:15:50 GMT
+Sat, 31 Aug 2019 18:43:27 GMT
++ source dockercontainerprune.sh
++++ docker ps --all --quiet
+++ docker stop 5f5cd2b6aab3
+++ docker container prune --force
+Deleted Containers:
+5f5cd2b6aab3ec6070535355dfa2086041b021f1b9df7d89f0634aaf794a44bb
 
-Script done on 2019-08-25 17:15:52+0300
+Total reclaimed space: 186B
+
+Script done on 2019-08-31 21:43:28+0300

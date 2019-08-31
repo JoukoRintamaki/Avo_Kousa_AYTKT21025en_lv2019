@@ -1,9 +1,11 @@
 #!/bin/bash
 set -x
-docker run --detach --name nginx-01 nginx | cat
-docker run --detach --name nginx-02 nginx | cat
-docker run --detach --name nginx-03 nginx | cat
-docker ps -a
+docker image pull --quiet nginx
+docker run --detach --name nginx-01 nginx
+docker run --detach --name nginx-02 nginx
+docker run --detach --name nginx-03 nginx
+docker ps --all
 docker stop nginx-01
 docker stop nginx-02
-docker ps -a
+docker ps --all
+source dockercontainerprune.sh

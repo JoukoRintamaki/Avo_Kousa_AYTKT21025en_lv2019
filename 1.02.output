@@ -1,12 +1,7 @@
-Script started on 2019-08-25 15:57:41+0300
+Script started on 2019-08-31 18:51:08+0300
 ++ docker ps --all --quiet
-+ docker stop 722cfaac954b 3f36ed251b9d 2604e96ba563
++ docker stop
 + docker system prune --volumes --all --force
-Deleted Containers:
-722cfaac954bf667c70eec3cc3b7540f7dfbfb485e4026c51d0ed94e348c271c
-3f36ed251b9d720b92e0b3dffd06099a2033452e1ecd3f251e01e36352eb7ce9
-2604e96ba563a0cde5df6226a8693f352244d120d26fe0ed2bcd4dde25cc123b
-
 Deleted Images:
 untagged: nginx:latest
 untagged: nginx@sha256:53ddb41e46de3d63376579acf46f9a41a8d7de33645db47a486de9769201fec9
@@ -14,11 +9,60 @@ deleted: sha256:5a3221f0137beb960c34b9cf4455424b6210160fd618c5e79401a07d6e5a2ced
 deleted: sha256:9517458cc6efeca05fee894eb0dda7cda7a704a6469e4624792289c9ff4350c0
 deleted: sha256:963e4580fca3bf364728a7df40a2348939c25213d32508c53849108d05764093
 deleted: sha256:1c95c77433e8d7bf0f519c9d8c9ca967e2603f0defbf379130d9a841cca2e28e
+deleted: sha256:f25522b5fed791d75ba36b21d2f7e0c7344551d796f25f9c4d5e53e9759fc569
+untagged: devopsdockeruh/pull_exercise:latest
+untagged: devopsdockeruh/pull_exercise@sha256:7c0635934049afb9ca0481fb6a58b16100f990a0d62c8665b9cfb5c9ada8a99f
+deleted: sha256:d9854bc0e13aaabc70a5679288679f20724e46548ad6b2cbec2b548b11fa62a4
+deleted: sha256:9d31714265bba48c1175ebb3c7b7adfd06b23995235cc5108c553906c2aa4836
+deleted: sha256:24a129b0909c6e4e6117436e17fc843ad81bface99920442706a1fb926467e66
+deleted: sha256:32cfa188a6edfd3683719c9abe07ebf951b1a2614869b2c3fd9760f23ea29cff
+deleted: sha256:c51fb877bccd38bfa92b5efcde3d6252a8a5b7ac292e5fa058daf15a78d4fc3f
+deleted: sha256:bcf2f368fe234217249e00ad9d762d8f1a3156d60c442ed92079fa5b120634a1
+untagged: devopsdockeruh/exec_bash_exercise:latest
+untagged: devopsdockeruh/exec_bash_exercise@sha256:c463832132d1fb0b8b3b60348a6fc36fda7512a4ef2d1050e8bea7b6a6d7a2f3
+deleted: sha256:489b6d8f2ab81ec84032c0e16deeded4862006b787353c740f1a4659f1b28a09
+deleted: sha256:2183b84cef51c03f45122ea74e50c6a1f7f75805faa37ed02486c0543540ff52
+deleted: sha256:7a1172cde2c65d940db89566d27cef602386c13eeb301aa074840ab392d2208f
+deleted: sha256:83da39057870ebfa6f036b386e7d2c103c093ffeb398dc314900d92905715baa
+deleted: sha256:08d50bbe2f6ceaf74b9c10a510ab2308ee6e6355e898c69c17d4331d4388106a
+deleted: sha256:c813ddc496920ebe32b6966614b95a8c4a51db9037a141765bbdd75f36f79156
+deleted: sha256:6fbd9662db012d50f620a1444c898914c09b7377285a35d7ac6e2b1d0db85a8f
+deleted: sha256:39496f7d4f99c499b3c87643953d7b5243cc8a05ed9aad9cf1f404633cf4f8ea
+deleted: sha256:ac00eef3f557ea71d47b65f3112c0c3b6ae7113153b7205a94bedc496103a6c8
+deleted: sha256:8f0ebc672b43403012c586feeac72ec83ce8347faab22a2826b952968aefc3d6
+deleted: sha256:13d5529fd232cacdd8cd561148560e0bf5d65dbc1149faf0c68240985607c303
+deleted: sha256:5da7c2415482c10ffba1e07d0c4df7d4e33f7d0881be931d910a6a2f2a6680ec
+untagged: devopsdockeruh/overwrite_cmd_exercise:latest
+untagged: devopsdockeruh/overwrite_cmd_exercise@sha256:0c2a9eb2e7dc97e9217abbd13d6c45767cc09f7e82b7dce113fe2322161f38a6
+deleted: sha256:a4fc08a9f2a553383c2f530300efc6130341a6bfcf63ba99bfb1f15cb17009de
+deleted: sha256:6dca86d91466d01acaed01642b981996aa3a56eceeeb14bfd7d9ae4c2f94c429
+deleted: sha256:9b89b5a3c68f81427c0414058dad8be2be578622a3661161f8f029e67c9971ff
+untagged: ubuntu:latest
+untagged: ubuntu@sha256:d1d454df0f579c6be4d8161d227462d69e163a8ff9d20a847533989cf0c94d90
+deleted: sha256:a2a15febcdf362f6115e801d37b5e60d6faaeedcb9896155e5fe9d754025be12
+deleted: sha256:fdc47e80ad3dbe1767a5c2141442c0c7aa93a14a817357a0d4353cd8ae48ee58
+deleted: sha256:2b4ed599a73ad82b15d4e3488d95af4f387037b90401d63ad6cb433374b3e3d3
+deleted: sha256:8f06e3a624319de717230f0d766dd8922d048441adb9e0387860a8047d000409
+deleted: sha256:6cebf3abed5fac58d2e792ce8461454e92c245d5312c42118f02e231a73b317f
+untagged: docker-clock:latest
+deleted: sha256:32b01c2afe6d82eb560648bbe7c306910aab6e57fb5b1836612d862074fa9598
+deleted: sha256:0f7f459b76c9d96459487f12affaac3a5bda90c6b2b29e85d511220cc27bef5a
+deleted: sha256:facdef1f84afa3dc00163fcdad22326d48236b31df13fbd911f27b310dcef039
+deleted: sha256:cdcd5588834167c819f6d6fd4c46202340e2396102aa90eb3462f1c11cb0ae5e
+deleted: sha256:1a0650bd613b1fc50961305d5f16f36e51914d1d4edd980d2a8db63e65373aea
+deleted: sha256:a8f5fb11ff953e73758be8c6fff1ee6aa7c20794a578b947acf984e43f861824
+deleted: sha256:844e0239b394b7aa3a8e27d5a95daa44ca8def59f589e9003a8184e0071c2624
+deleted: sha256:20f9d797572b67b18de9a32ea4b3048ff9a1b219cbb5321fd565745dbf9e203c
+deleted: sha256:09798890afdc89e906b235b5eb538dd1c03e3a86ce799371ce5d2f7fb6a34951
+deleted: sha256:cfac9ecfbc0042ad5d839aff41adba39d65684c7e15af9f66d237dc03d1fd60b
+deleted: sha256:f352c02ab6c1704fd1cac057d122c71ab8d059dcbf433068ad7c88c6d7771a43
+deleted: sha256:b9c3b217e735278337071985f35849d0864facfcc5d01884910980b895e03f77
+deleted: sha256:fbb641a8b94349e89886f65d79928e4673530e2a2b4d33c2c95e0426713f78e4
 
-Total reclaimed space: 126MB
+Total reclaimed space: 2.108GB
 + docker ps --all
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 + docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 
-Script done on 2019-08-25 15:57:42+0300
+Script done on 2019-08-31 18:51:11+0300

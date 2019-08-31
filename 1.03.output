@@ -1,35 +1,18 @@
-Script started on 2019-08-25 15:58:56+0300
-+ docker run --interactive --tty devopsdockeruh/pull_exercise
-+ cat
-Unable to find image 'devopsdockeruh/pull_exercise:latest' locally
-latest: Pulling from devopsdockeruh/pull_exercise
-8e402f1a9c57: Pulling fs layer
-5e2195587d10: Pulling fs layer
-6f595b2fc66d: Pulling fs layer
-165f32bf4e94: Pulling fs layer
-67c4f504c224: Pulling fs layer
-165f32bf4e94: Waiting
-67c4f504c224: Waiting
-6f595b2fc66d: Verifying Checksum
-6f595b2fc66d: Download complete
-165f32bf4e94: Verifying Checksum
-165f32bf4e94: Download complete
-67c4f504c224: Verifying Checksum
-67c4f504c224: Download complete
-8e402f1a9c57: Verifying Checksum
-8e402f1a9c57: Download complete
-8e402f1a9c57: Pull complete
-5e2195587d10: Verifying Checksum
-5e2195587d10: Download complete
-5e2195587d10: Pull complete
-6f595b2fc66d: Pull complete
-165f32bf4e94: Pull complete
-67c4f504c224: Pull complete
-Digest: sha256:7c0635934049afb9ca0481fb6a58b16100f990a0d62c8665b9cfb5c9ada8a99f
-Status: Downloaded newer image for devopsdockeruh/pull_exercise:latest
+Script started on 2019-08-31 21:43:06+0300
++ docker pull --quiet devopsdockeruh/pull_exercise
+docker.io/devopsdockeruh/pull_exercise:latest
++ docker run --tty --interactive devopsdockeruh/pull_exercise sh -c 'echo basics | node index.js'
 [1G[0JGive me the password: [23Gbasics
 You found the correct password. Secret message is:
 "This is the secret message"
 
++ source dockercontainerprune.sh
++++ docker ps --all --quiet
+++ docker stop a38c60c34764
+++ docker container prune --force
+Deleted Containers:
+a38c60c34764ffb312f1b24dabe1bddf58e3cee9b5bef9a845210d67ee28c2b8
 
-Script done on 2019-08-25 15:59:31+0300
+Total reclaimed space: 0B
+
+Script done on 2019-08-31 21:43:09+0300

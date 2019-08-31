@@ -1,14 +1,10 @@
-Script started on 2019-08-25 18:21:45+0300
+Script started on 2019-08-31 21:43:28+0300
++ docker image pull --quiet ubuntu
+docker.io/library/ubuntu:latest
 + docker run --detach --interactive --tty --name ubuntu ubuntu
-8603bd9a49c0d902d11d5609d1eb9f71c5fc4435147795d164f9b5f8c5cc1d6a
-+ docker exec ubuntu apt -qqq update
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
-+ docker exec ubuntu apt -qqq -y install curl
-
-WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-
+c47577832078a5922a870fda90b4d56254cbebf9b5e2b6f57b4fe8c4c4e7acf1
++ docker exec ubuntu apt-get -qq update
++ docker exec ubuntu apt-get -qq install curl
 debconf: delaying package configuration, since apt-utils is not installed
 Selecting previously unselected package libssl1.1:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4040 files and directories currently installed.)
@@ -81,11 +77,11 @@ Selecting previously unselected package libsasl2-2:amd64.
 Preparing to unpack .../22-libsasl2-2_2.1.27~101-g0780600+dfsg-3ubuntu2_amd64.deb ...
 Unpacking libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
 Selecting previously unselected package libldap-common.
-Preparing to unpack .../23-libldap-common_2.4.45+dfsg-1ubuntu1.3_all.deb ...
-Unpacking libldap-common (2.4.45+dfsg-1ubuntu1.3) ...
+Preparing to unpack .../23-libldap-common_2.4.45+dfsg-1ubuntu1.4_all.deb ...
+Unpacking libldap-common (2.4.45+dfsg-1ubuntu1.4) ...
 Selecting previously unselected package libldap-2.4-2:amd64.
-Preparing to unpack .../24-libldap-2.4-2_2.4.45+dfsg-1ubuntu1.3_amd64.deb ...
-Unpacking libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.3) ...
+Preparing to unpack .../24-libldap-2.4-2_2.4.45+dfsg-1ubuntu1.4_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.4) ...
 Selecting previously unselected package libnghttp2-14:amd64.
 Preparing to unpack .../25-libnghttp2-14_1.30.0-1ubuntu1_amd64.deb ...
 Unpacking libnghttp2-14:amd64 (1.30.0-1ubuntu1) ...
@@ -102,7 +98,7 @@ Selecting previously unselected package libsasl2-modules:amd64.
 Preparing to unpack .../29-libsasl2-modules_2.1.27~101-g0780600+dfsg-3ubuntu2_amd64.deb ...
 Unpacking libsasl2-modules:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
 Setting up libnghttp2-14:amd64 (1.30.0-1ubuntu1) ...
-Setting up libldap-common (2.4.45+dfsg-1ubuntu1.3) ...
+Setting up libldap-common (2.4.45+dfsg-1ubuntu1.4) ...
 Setting up libpsl5:amd64 (0.19.1-5build1) ...
 Setting up libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
 Setting up libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
@@ -143,7 +139,7 @@ Setting up libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1) ...
 Setting up libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1) ...
 Setting up libgssapi-krb5-2:amd64 (1.16-2ubuntu0.1) ...
 Setting up libgssapi3-heimdal:amd64 (7.5.0+dfsg-1) ...
-Setting up libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.3) ...
+Setting up libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.4) ...
 Setting up libcurl4:amd64 (7.58.0-2ubuntu3.7) ...
 Setting up curl (7.58.0-2ubuntu3.7) ...
 Processing triggers for libc-bin (2.27-3ubuntu1) ...
@@ -158,13 +154,21 @@ helsinki.fi
 Searching..
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0   2310      0 --:--:-- --:--:-- --:--:-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
 <title>301 Moved Permanently</title>
 </head><body>
 <h1>Moved Permanently</h1>
 <p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
 </body></html>
--  2287
+100   231  100   231    0     0   2310      0 --:--:-- --:--:-- --:--:--  2310
++ source dockercontainerprune.sh
++++ docker ps --all --quiet
+++ docker stop c47577832078
+++ docker container prune --force
+Deleted Containers:
+c47577832078a5922a870fda90b4d56254cbebf9b5e2b6f57b4fe8c4c4e7acf1
 
-Script done on 2019-08-25 18:22:35+0300
+Total reclaimed space: 41.34MB
+
+Script done on 2019-08-31 21:44:26+0300
