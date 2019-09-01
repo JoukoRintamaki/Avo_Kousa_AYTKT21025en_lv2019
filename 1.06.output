@@ -1,4 +1,4 @@
-Script started on 2019-08-31 21:44:26+0300
+Script started on 2019-09-01 09:44:58+0300
 + DOCKERFILEFOLDER=1.06.Dockerfile
 + [[ ! -e 1.06.Dockerfile/Dockerfile ]]
 + cat
@@ -12,11 +12,11 @@ sha256:f92a458fcdfed46770c82bcd053b18dd87c604fc989a6faa038ebd94ae9d65ba
 5
 + source dockercontainerprune.sh
 +++ docker ps --all --quiet
-++ docker stop ab5f4f4f7a91
+++ docker stop 0d6b17ca5d6c
 ++ docker container prune --force
 Deleted Containers:
-ab5f4f4f7a91ca3ec10c26a77929ba9da868268b19c53502bdad12d2b564be68
+0d6b17ca5d6ce64ab6c78ca148baad02a5283d129bb72e37dd904ae4e8ae81f2
 
 Total reclaimed space: 0B
 
-Script done on 2019-08-31 21:44:33+0300
+Script done on 2019-09-01 09:45:05+0300

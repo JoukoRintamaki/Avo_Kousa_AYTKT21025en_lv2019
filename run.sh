@@ -6,3 +6,6 @@ script -c ./1.04.sh 1.04.output --quiet
 script -c ./1.05.sh 1.05.output --quiet
 script -c ./1.06.sh 1.06.output --quiet
 script -c ./1.07.sh 1.07.output --quiet
+script -c ./1.08.sh 1.08.output --quiet
+script -c ./1.09.sh 1.09.output --quiet
+script -c ./1.10.sh 1.10.output --quiet

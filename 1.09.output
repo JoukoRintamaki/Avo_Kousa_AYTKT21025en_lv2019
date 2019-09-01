@@ -1,0 +1,18 @@
+Script started on 2019-09-01 17:39:48+0300
++ IMAGE=devopsdockeruh/ports_exercise
++ docker pull --quiet devopsdockeruh/ports_exercise
+docker.io/devopsdockeruh/ports_exercise:latest
++ docker run --detach --publish 80:80 devopsdockeruh/ports_exercise
+2a3932b01de1b87c50cf7422c6c333126082daf56ada0707e1a8ccf206d7f22b
++ sleep 5s
++ curl --url http://localhost:80
+Ports configured correctly!!+ source dockercontainerprune.sh
++++ docker ps --all --quiet
+++ docker stop 2a3932b01de1
+++ docker container prune --force
+Deleted Containers:
+2a3932b01de1b87c50cf7422c6c333126082daf56ada0707e1a8ccf206d7f22b
+
+Total reclaimed space: 55B
+
+Script done on 2019-09-01 17:39:57+0300

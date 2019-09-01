@@ -1,8 +1,8 @@
-Script started on 2019-08-31 21:43:28+0300
+Script started on 2019-09-01 09:36:37+0300
 + docker image pull --quiet ubuntu
 docker.io/library/ubuntu:latest
 + docker run --detach --interactive --tty --name ubuntu ubuntu
-c47577832078a5922a870fda90b4d56254cbebf9b5e2b6f57b4fe8c4c4e7acf1
+cf043bbd753c50c801fd5dbac234808d130c4231717da46f333bb22f65731036
 + docker exec ubuntu apt-get -qq update
 + docker exec ubuntu apt-get -qq install curl
 debconf: delaying package configuration, since apt-utils is not installed
@@ -154,21 +154,21 @@ helsinki.fi
 Searching..
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0    314      0 --:--:-- --:--:-- --:--:--   314
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
 <title>301 Moved Permanently</title>
 </head><body>
 <h1>Moved Permanently</h1>
 <p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
 </body></html>
-100   231  100   231    0     0   2310      0 --:--:-- --:--:-- --:--:--  2310
 + source dockercontainerprune.sh
 +++ docker ps --all --quiet
-++ docker stop c47577832078
+++ docker stop cf043bbd753c
 ++ docker container prune --force
 Deleted Containers:
-c47577832078a5922a870fda90b4d56254cbebf9b5e2b6f57b4fe8c4c4e7acf1
+cf043bbd753c50c801fd5dbac234808d130c4231717da46f333bb22f65731036
 
 Total reclaimed space: 41.34MB
 
-Script done on 2019-08-31 21:44:26+0300
+Script done on 2019-09-01 09:44:58+0300

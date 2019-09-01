@@ -1,4 +1,4 @@
-Script started on 2019-08-31 21:44:33+0300
+Script started on 2019-09-01 09:45:05+0300
 + DOCKERFILEFOLDER=1.07.Dockerfile
 + [[ ! -e 1.07.Dockerfile/Dockerfile ]]
 + cat
@@ -10,7 +10,7 @@ Input website:
 Searching..
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0   2008      0 --:--:-- --:--:-- --:--:--  1991
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0    407      0 --:--:-- --:--:-- --:--:--   407
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
 <title>301 Moved Permanently</title>
@@ -20,11 +20,11 @@ Searching..
 </body></html>
 + source dockercontainerprune.sh
 +++ docker ps --all --quiet
-++ docker stop df8caeca59c0
+++ docker stop a8dc6cea5186
 ++ docker container prune --force
 Deleted Containers:
-df8caeca59c07e605b416cb16cc65a349e492ebe7d4b1d61b57a2ece9210cf9a
+a8dc6cea51862fa0a84c14f2623cd815bc698ed51b0b643de74ff3affe77d4ba
 
 Total reclaimed space: 0B
 
-Script done on 2019-08-31 21:44:36+0300
+Script done on 2019-09-01 09:45:08+0300

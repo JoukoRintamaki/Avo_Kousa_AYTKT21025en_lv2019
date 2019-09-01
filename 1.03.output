@@ -1,4 +1,4 @@
-Script started on 2019-08-31 21:43:06+0300
+Script started on 2019-09-01 09:36:06+0300
 + docker pull --quiet devopsdockeruh/pull_exercise
 docker.io/devopsdockeruh/pull_exercise:latest
 + docker run --tty --interactive devopsdockeruh/pull_exercise sh -c 'echo basics | node index.js'
@@ -8,11 +8,11 @@ You found the correct password. Secret message is:
 
 + source dockercontainerprune.sh
 +++ docker ps --all --quiet
-++ docker stop a38c60c34764
+++ docker stop fec8336c6b88
 ++ docker container prune --force
 Deleted Containers:
-a38c60c34764ffb312f1b24dabe1bddf58e3cee9b5bef9a845210d67ee28c2b8
+fec8336c6b88b0e3c97a7fdf9e56ff08197454336ee137bb21c947f707d67a51
 
 Total reclaimed space: 0B
 
-Script done on 2019-08-31 21:43:09+0300
+Script done on 2019-09-01 09:36:13+0300

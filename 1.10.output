@@ -1,0 +1,36 @@
+Script started on 2019-09-01 20:44:33+0300
++ DOCKERFILEFOLDER=1.10.Dockerfile
++ [[ ! -e 1.10.Dockerfile/Dockerfile ]]
++ cat
++ docker build --quiet --tag frontend-example-docker 1.10.Dockerfile
+sha256:dabb500936ba883dfd3820a97d88c18ca27793bef3b9c252fc2aeb3e57a119a2
++ docker run --detach --publish 5000:5000 frontend-example-docker
+7bc6e2eed391dfd62ce10f717764cde65b6cdc4f9f009790d2027208d75c6466
++ sleep 60s
++ curl --url http://localhost:5000
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>Webpack App</title>
+    <link href="vendors~main-1.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root">
+    </div>
+    <script src="vendors~main.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
++ source dockercontainerprune.sh
++++ docker ps --all --quiet
+++ docker stop 7bc6e2eed391
+++ docker container prune --force
+Deleted Containers:
+7bc6e2eed391dfd62ce10f717764cde65b6cdc4f9f009790d2027208d75c6466
+
+Total reclaimed space: 24.31MB
+
+Script done on 2019-09-01 20:45:35+0300
