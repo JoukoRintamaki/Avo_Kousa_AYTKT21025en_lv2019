@@ -1,0 +1,52 @@
+Script started on 2019-09-22 14:53:37+0300
++ EXERCISE=1.12
++ DOCKERFILEFOLDER=1.12.Backend.Dockerfile
++ TAG=backend-example-docker
++ PORT=8000
++ [[ ! -e 1.12.Backend.Dockerfile/Dockerfile ]]
++ cat
++ docker build --quiet --tag backend-example-docker 1.12.Backend.Dockerfile
+sha256:42cbf09743f1211e8d19964237c0fe226b4b92b0f0279960d9ed3c3125227a4d
++ docker run --name backend-example-docker --detach --publish 8000:8000 backend-example-docker
+d0e19916a46df89b1f14b42c3e64486495dc6bfe6379a0d7028aa5e298d28367
++ DOCKERFILEFOLDER=1.12.Frontend.Dockerfile
++ TAG=frontend-example-docker
++ PORT=5000
++ [[ ! -e 1.12.Frontend.Dockerfile/Dockerfile ]]
++ cat
++ docker build --quiet --tag frontend-example-docker 1.12.Frontend.Dockerfile
+sha256:fce91a2dd69aa6b2c731dd2f6f4f54852657f21fed994787b6e8a848aec5a218
++ docker run --name frontend-example-docker --detach --publish 5000:5000 frontend-example-docker
+ff9cc5452c99d3ce662976fde694cb7e7101657866532ea278a3fc2382ca2b45
++ sleep 30s
++ curl --url http://localhost:5000
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>Webpack App</title>
+    <link href="vendors~main-1.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root">
+    </div>
+    <script src="vendors~main.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
++ wkhtmltoimage --quiet http://localhost:5000 1.12.output.png
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
++ source dockercontainerprune.sh
++++ docker ps --all --quiet
+++ docker stop ff9cc5452c99 d0e19916a46d
+++ docker container prune --force
+Deleted Containers:
+ff9cc5452c99d3ce662976fde694cb7e7101657866532ea278a3fc2382ca2b45
+d0e19916a46df89b1f14b42c3e64486495dc6bfe6379a0d7028aa5e298d28367
+
+Total reclaimed space: 24.56MB
+
+Script done on 2019-09-22 14:54:13+0300

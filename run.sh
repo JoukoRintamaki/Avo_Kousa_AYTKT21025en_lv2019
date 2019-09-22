@@ -9,3 +9,7 @@ script -c ./1.07.sh 1.07.output --quiet
 script -c ./1.08.sh 1.08.output --quiet
 script -c ./1.09.sh 1.09.output --quiet
 script -c ./1.10.sh 1.10.output --quiet
+script -c ./1.11.sh 1.11.output --quiet
+script -c ./1.12.sh 1.12.output --quiet
+script -c ./1.13.sh 1.13.output --quiet
+script -c ./1.14.sh 1.14.output --quiet

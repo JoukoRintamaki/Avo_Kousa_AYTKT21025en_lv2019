@@ -1,0 +1,39 @@
+Script started on 2019-09-22 15:04:04+0300
++ EXERCISE=1.13
++ DOCKERFILEFOLDER=1.13.Dockerfile
++ TAG=spring-example-project
++ PORT=8080
++ [[ ! -e 1.13.Dockerfile/Dockerfile ]]
++ mkdir -p 1.13.Dockerfile
++ touch 1.13.Dockerfile/Dockerfile
++ cat
++ docker build --quiet --tag spring-example-project 1.13.Dockerfile
+sha256:b4d2f9a95f2d48540a77fe676f1ae87555cfeb99bc02e6264798090fd6d1ce99
++ docker run --name spring-example-project --detach --publish 8080:8080 spring-example-project
+4dbbf7fda55ae9baf6a25a172b8e17d117730cc51c0743edf18462289e6981ea
++ sleep 20s
++ curl --url http://localhost:8080
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <title>Spring</title>
+        <meta charset="UTF-8" />
+
+    </head>
+    <body style="width: fit-content; padding-top: 3em; margin: auto;">
+        <form action="/press" method="post">
+            <button class="btn btn-info btn-outline-dark" type="submit">Press here</button>
+        </form>
+        <p style="width: fit-content; margin: auto;"></p>
+    </body>
+</html>
++ source dockercontainerprune.sh
++++ docker ps --all --quiet
+++ docker stop 4dbbf7fda55a
+++ docker container prune --force
+Deleted Containers:
+4dbbf7fda55ae9baf6a25a172b8e17d117730cc51c0743edf18462289e6981ea
+
+Total reclaimed space: 0B
+
+Script done on 2019-09-22 15:08:44+0300

@@ -1,0 +1,38 @@
+Script started on 2019-09-22 11:41:21+0300
++ rm -f /c/Temp/logs.txt
++ touch /c/Temp/logs.txt
++ EXERCISE=1.11
++ DOCKERFILEFOLDER=1.11.Dockerfile
++ TAG=backend-example-docker
++ PORT=8000
++ [[ ! -e 1.11.Dockerfile/Dockerfile ]]
++ cat
++ docker build --quiet --tag backend-example-docker 1.11.Dockerfile
+sha256:d9b43beeb4becf8441d661742a291005d0d7d9ba478a537e2e6d0d6fae6891f1
++ docker run --name backend-example-docker --volume /c/Temp/logs.txt:/usr/src/backend-example-docker/logs.txt --detach --publish 8000:8000 backend-example-docker
+363d540049286d64748465c1933258394ae3584ec2b60b32801d2660f26c2eac
++ sleep 10s
++ curl --url http://localhost:8000
+Port configured correctly, generated message in logs.txt+ cat /c/Temp/logs.txt
+9/22/2019, 8:41:33 AM: Connection received in root
++ docker stop backend-example-docker
+backend-example-docker
++ cat /c/Temp/logs.txt
+9/22/2019, 8:41:33 AM: Connection received in root
++ docker start backend-example-docker
+backend-example-docker
++ sleep 10s
++ curl --url http://localhost:8000
+Port configured correctly, generated message in logs.txt+ cat /c/Temp/logs.txt
+9/22/2019, 8:41:33 AM: Connection received in root
+9/22/2019, 8:41:45 AM: Connection received in root
++ source dockercontainerprune.sh
++++ docker ps --all --quiet
+++ docker stop 363d54004928
+++ docker container prune --force
+Deleted Containers:
+363d540049286d64748465c1933258394ae3584ec2b60b32801d2660f26c2eac
+
+Total reclaimed space: 252.2kB
+
+Script done on 2019-09-22 11:41:47+0300

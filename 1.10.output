@@ -1,11 +1,14 @@
-Script started on 2019-09-01 20:44:33+0300
+Script started on 2019-09-22 10:38:14+0300
++ EXERCISE=1.10
 + DOCKERFILEFOLDER=1.10.Dockerfile
++ TAG=frontend-example-docker
++ PORT=5000
 + [[ ! -e 1.10.Dockerfile/Dockerfile ]]
 + cat
 + docker build --quiet --tag frontend-example-docker 1.10.Dockerfile
 sha256:dabb500936ba883dfd3820a97d88c18ca27793bef3b9c252fc2aeb3e57a119a2
 + docker run --detach --publish 5000:5000 frontend-example-docker
-7bc6e2eed391dfd62ce10f717764cde65b6cdc4f9f009790d2027208d75c6466
+29ace2004702cfebfab99bc2b5ec93f06d77ef18171f457fe1182ff91576f9d0
 + sleep 60s
 + curl --url http://localhost:5000
 <!DOCTYPE html>
@@ -24,13 +27,16 @@ sha256:dabb500936ba883dfd3820a97d88c18ca27793bef3b9c252fc2aeb3e57a119a2
     <script src="main.js" type="text/javascript"></script>
   </body>
 </html>
++ wkhtmltoimage --quiet http://localhost:5000 1.10.output.png
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
 + source dockercontainerprune.sh
 +++ docker ps --all --quiet
-++ docker stop 7bc6e2eed391
+++ docker stop 29ace2004702
 ++ docker container prune --force
 Deleted Containers:
-7bc6e2eed391dfd62ce10f717764cde65b6cdc4f9f009790d2027208d75c6466
+29ace2004702cfebfab99bc2b5ec93f06d77ef18171f457fe1182ff91576f9d0
 
 Total reclaimed space: 24.31MB
 
-Script done on 2019-09-01 20:45:35+0300
+Script done on 2019-09-22 10:39:19+0300
