@@ -14,14 +14,17 @@ FROM ruby:2.6.0
 WORKDIR /usr/src/$TAG
 RUN mkdir -p /usr/src/$TAG
 RUN git clone https://github.com/docker-hy/$TAG.git /usr/src/$TAG 
-RUN cd /usr/src/$TAG && bundle install && rails db:migrate RAILS_ENV=production && rake assets:precompile 
+RUN cd /usr/src/$TAG && bundle install
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install -y nodejs
+RUN rails db:migrate
+RUN rake assets:precompile
 EXPOSE $PORT
-CMD ["rails ","s","-e"."production"]
+CMD ["rails","s"]
 EOF
 
 docker build --quiet --tag $TAG $DOCKERFILEFOLDER 
 docker run --name $TAG --detach --publish $PORT:$PORT $TAG
-sleep 20s
-#curl --url http://localhost:$PORT
-#wkhtmltoimage --quiet http://localhost:$PORT $EXERCISE.output.png
+sleep 25s
+curl --url http://localhost:$PORT
 source dockercontainerprune.sh
