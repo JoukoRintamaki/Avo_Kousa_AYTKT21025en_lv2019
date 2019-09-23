@@ -13,3 +13,4 @@ script -c ./1.11.sh 1.11.output --quiet
 script -c ./1.12.sh 1.12.output --quiet
 script -c ./1.13.sh 1.13.output --quiet
 script -c ./1.14.sh 1.14.output --quiet
+script -c ./2.01.sh 2.01.output --quiet
