@@ -1,0 +1,64 @@
+Script started on 2019-09-29 12:58:57+0300
+--2019-09-29 12:58:57--  https://github.com/docker-hy/scaling-exercise/archive/master.zip
+Resolving github.com (github.com)... 140.82.118.4
+Connecting to github.com (github.com)|140.82.118.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/docker-hy/scaling-exercise/zip/master [following]
+--2019-09-29 12:58:57--  https://codeload.github.com/docker-hy/scaling-exercise/zip/master
+Resolving codeload.github.com (codeload.github.com)... 140.82.113.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.113.9|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 107120 (105K) [application/zip]
+Saving to: ‘master.zip’
+
+master.zip                          0%[                                                           ]       0  --.-KB/s               master.zip                         35%[===================>                                       ]  36.83K   154KB/s               master.zip                        100%[==========================================================>] 104.61K   249KB/s    in 0.4s    
+
+2019-09-29 12:58:58 (249 KB/s) - ‘master.zip’ saved [107120/107120]
+
+Archive:  master.zip
+0dcfb9fb8f8f950fd3814c9066df2f60f457d083
+   creating: scaling-exercise-master/
+ extracting: scaling-exercise-master/.gitignore  
+   creating: scaling-exercise-master/calculator/
+ extracting: scaling-exercise-master/calculator/.gitignore  
+  inflating: scaling-exercise-master/calculator/Dockerfile  
+  inflating: scaling-exercise-master/calculator/babel.config.js  
+  inflating: scaling-exercise-master/calculator/package-lock.json  
+  inflating: scaling-exercise-master/calculator/package.json  
+   creating: scaling-exercise-master/calculator/src/
+  inflating: scaling-exercise-master/calculator/src/commons.js  
+   creating: scaling-exercise-master/calculator/src/components/
+  inflating: scaling-exercise-master/calculator/src/components/App.js  
+  inflating: scaling-exercise-master/calculator/src/components/Playground.js  
+  inflating: scaling-exercise-master/calculator/src/components/Test.js  
+  inflating: scaling-exercise-master/calculator/src/index.html  
+  inflating: scaling-exercise-master/calculator/src/index.js  
+  inflating: scaling-exercise-master/calculator/webpack.config.js  
+   creating: scaling-exercise-master/compute/
+ extracting: scaling-exercise-master/compute/.gitignore  
+  inflating: scaling-exercise-master/compute/Dockerfile  
+  inflating: scaling-exercise-master/compute/index.js  
+  inflating: scaling-exercise-master/compute/package-lock.json  
+  inflating: scaling-exercise-master/compute/package.json  
+  inflating: scaling-exercise-master/docker-compose.yml  
+   creating: scaling-exercise-master/load-balancer/
+ extracting: scaling-exercise-master/load-balancer/Dockerfile  
+Creating network "204_default" with the default driver
+Creating load-balancer ... 
+Creating 204_compute_1 ... 
+Creating 204_compute_2 ... 
+Creating 204_compute_3 ... 
+Creating calculator    ... 
+[3A[2KCreating 204_compute_2 ... [32mdone[0m[3B[5A[2KCreating load-balancer ... [32mdone[0m[5B[2A[2KCreating 204_compute_3 ... [32mdone[0m[2B[4A[2KCreating 204_compute_1 ... [32mdone[0m[4B[1A[2KCreating calculator    ... [32mdone[0m[1BStopping calculator    ... 
+Stopping 204_compute_3 ... 
+Stopping 204_compute_2 ... 
+Stopping 204_compute_1 ... 
+Stopping load-balancer ... 
+[4A[2KStopping 204_compute_3 ... [32mdone[0m[4B[3A[2KStopping 204_compute_2 ... [32mdone[0m[3B[5A[2KStopping calculator    ... [32mdone[0m[5B[2A[2KStopping 204_compute_1 ... [32mdone[0m[2B[1A[2KStopping load-balancer ... [32mdone[0m[1BRemoving calculator    ... 
+Removing 204_compute_3 ... 
+Removing 204_compute_2 ... 
+Removing 204_compute_1 ... 
+Removing load-balancer ... 
+[4A[2KRemoving 204_compute_3 ... [32mdone[0m[4B[2A[2KRemoving 204_compute_1 ... [32mdone[0m[2B[3A[2KRemoving 204_compute_2 ... [32mdone[0m[3B[5A[2KRemoving calculator    ... [32mdone[0m[5B[1A[2KRemoving load-balancer ... [32mdone[0m[1BRemoving network 204_default
+
+Script done on 2019-09-29 13:00:04+0300

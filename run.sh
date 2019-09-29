@@ -16,3 +16,4 @@ script -c ./1.14.sh 1.14.output --quiet
 script -c ./2.01.sh 2.01.output --quiet
 script -c ./2.02.sh 2.02.output --quiet
 script -c ./2.03.sh 2.03.output --quiet
+script -c ./2.04.sh 2.04.output --quiet
