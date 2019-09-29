@@ -1,0 +1,18 @@
+Script started on 2019-09-29 09:36:07+0300
++ EXERCISE=2.02
++ TAG=ports_exercise
++ EXERCISEFOLDER=2.02.ports_exercise
++ [[ ! -e 2.02.ports_exercise/docker-compose.yml ]]
++ cat
++ cd 2.02.ports_exercise
++ docker-compose up --detach
+Creating network "202ports_exercise_default" with the default driver
+Creating 202ports_exercise_ports_exercise_1 ... 
+[1A[2KCreating 202ports_exercise_ports_exercise_1 ... [32mdone[0m[1B+ sleep 10s
++ curl localhost:80
+Ports configured correctly!!+ docker-compose down
+Stopping 202ports_exercise_ports_exercise_1 ... 
+[1A[2KStopping 202ports_exercise_ports_exercise_1 ... [32mdone[0m[1BRemoving 202ports_exercise_ports_exercise_1 ... 
+[1A[2KRemoving 202ports_exercise_ports_exercise_1 ... [32mdone[0m[1BRemoving network 202ports_exercise_default
+
+Script done on 2019-09-29 09:36:21+0300

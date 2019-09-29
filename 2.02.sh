@@ -1,14 +1,12 @@
 #!/bin/bash
 set -x
-rm -f /c/Temp/logs.txt
-touch /c/Temp/logs.txt
-EXERCISE=2.01
+EXERCISE=2.02
 TAG=ports_exercise
 EXERCISEFOLDER=$EXERCISE.$TAG
 
 if [[ ! -e $EXERCISEFOLDER/docker-compose.yml ]]; then
-	mkdir -p $EXERCISEFOLDER
-	touch $EXERCISEFOLDER/docker-compose.yml
+      mkdir -p $EXERCISEFOLDER
+      touch $EXERCISEFOLDER/docker-compose.yml
 fi
 
 cat >$EXERCISEFOLDER/docker-compose.yml <<EOF
@@ -16,10 +14,12 @@ version: "3"
 services:
       $TAG:
             image: devopsdockeruh/$TAG
-            volumes:
-                  - /c/Temp/logs.txt:/usr/app/logs.txt
+            ports:
+                  - 80:80
 EOF
 
-cat /c/Temp/logs.txt
-cd $EXERCISEFOLDER && timeout 10s docker-compose up
-cat /c/Temp/logs.txt
+cd $EXERCISEFOLDER
+docker-compose up --detach
+sleep 10s
+curl localhost:80
+docker-compose down
