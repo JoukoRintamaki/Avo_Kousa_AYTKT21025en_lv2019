@@ -1,0 +1,14 @@
+Script started on 2019-09-29 16:43:25+0300
+Starting backend-example-docker ... 
+Starting redis                  ... 
+[2A[2KStarting backend-example-docker ... [32mdone[0m[2B[1A[2KStarting redis                  ... [32mdone[0m[1Bpong
+real	0m0.083s
+user	0m0.016s
+sys	0m0.016s
+Stopping redis                  ... 
+Stopping backend-example-docker ... 
+[1A[2KStopping backend-example-docker ... [32mdone[0m[1B[2A[2KStopping redis                  ... [32mdone[0m[2BRemoving redis                  ... 
+Removing backend-example-docker ... 
+[2A[2KRemoving redis                  ... [32mdone[0m[2B[1A[2KRemoving backend-example-docker ... [32mdone[0m[1BRemoving network 205_default
+
+Script done on 2019-09-29 16:44:29+0300

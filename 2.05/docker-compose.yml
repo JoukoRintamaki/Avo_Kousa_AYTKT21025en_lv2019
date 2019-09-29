@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+ backend-example-docker:
+  build: ./backend-example-docker
+  container_name: backend-example-docker
+  environment:
+   - REDIS=redis
+  ports:
+   - 8000:8000
+  image: backend-example-docker
+
+ redis:
+  container_name: redis
+  image: redis
+  ports:
+    - 6379
