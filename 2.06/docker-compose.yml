@@ -5,10 +5,12 @@ services:
   container_name: backend-example-docker
   environment:
    - REDIS=redis
+   - DB_USERNAME=postgres
+   - DB_PASSWORD=salasana
+   - DB_HOST=postgres
   ports:
    - 8000:8000
   image: backend-example-docker
-
  frontend-example-docker:
   build: ./frontend-example-docker
   container_name: frontend-example-docker
@@ -20,3 +22,10 @@ services:
   image: redis
   ports:
     - 6379
+ postgres:
+  container_name: postgres
+  image: postgres
+  restart: unless-stopped
+  environment:
+   - POSTGRES_USERNAME=postgres
+   - POSTGRES_PASSWORD=salasana

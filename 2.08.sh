@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-EXERCISE=2.05
+EXERCISE=2.08
 
 if [[ ! -e $EXERCISE/docker-compose.yml ]]; then
 	mkdir -p $EXERCISE
@@ -37,10 +37,12 @@ cat >>$EXERCISE/docker-compose.yml <<EOF
   container_name: $TAG
   environment:
    - REDIS=redis
+   - DB_USERNAME=postgres
+   - DB_PASSWORD=salasana
+   - DB_HOST=postgres
   ports:
    - $PORT:$PORT
   image: $TAG
-
 EOF
 
 TAG=frontend-example-docker
@@ -80,8 +82,48 @@ cat >>$EXERCISE/docker-compose.yml <<EOF
     - 6379
 EOF
 
+TAG=postgres
+cat >>$EXERCISE/docker-compose.yml <<EOF
+ $TAG:
+  container_name: $TAG
+  image: $TAG
+  restart: unless-stopped
+  environment:
+   - POSTGRES_USERNAME=postgres
+   - POSTGRES_PASSWORD=salasana
+EOF
+
+TAG=nginx
+cat >>$EXERCISE/docker-compose.yml <<EOF
+ $TAG:
+  container_name: $TAG
+  image: $TAG
+  ports:
+   - 80:80
+  environment:
+   - NGINX_PORT=80
+  volumes:
+   - /c/Temp/nginx.conf:/etc/nginx/nginx.conf
+EOF
+
+cat >/c/Temp/nginx.conf <<EOF
+events { worker_connections 1024; }
+http {
+ server {
+  listen 80;
+
+  location / {
+   proxy_pass http://frontend-example-docker:5000/;
+  }
+
+  location /api/ {
+   proxy_pass http://backend-example-docker:8000/;
+  }
+ }
+}
+EOF
+
 cd $EXERCISE
 docker-compose up --detach
 sleep 30s
-time curl localhost:8000/slow
 docker-compose down
