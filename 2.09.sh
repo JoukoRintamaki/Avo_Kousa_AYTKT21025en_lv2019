@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-EXERCISE=2.08
+EXERCISE=2.09
 
 if [[ ! -e $EXERCISE/docker-compose.yml ]]; then
 	mkdir -p $EXERCISE
@@ -126,6 +126,5 @@ EOF
 cd $EXERCISE
 docker-compose up --detach --quiet-pull
 sleep 30s
-selenium-side-runner --server http://localhost:4444/wd/hub ../2.08.side
 docker-compose down
 docker image remove frontend-example-docker backend-example-docker
