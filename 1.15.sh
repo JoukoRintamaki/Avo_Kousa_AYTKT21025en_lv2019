@@ -17,4 +17,12 @@ docker run --name $TAG $TAG
 docker tag $TAG joukorintamaki/$TAG
 docker push joukorintamaki/$TAG
 
+echo
+echo
+echo Public View:
+echo
+echo https://hub.docker.com/r/joukorintamaki/helloworld
+echo
+echo
+
 docker rm $TAG --force --volumes

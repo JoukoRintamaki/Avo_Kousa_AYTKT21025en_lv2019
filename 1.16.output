@@ -1,0 +1,45 @@
+Script started on 2019-12-30 18:40:15+0200
++ HEROKU_APP=jr-exercise-1-16
++ docker image pull --quiet devopsdockeruh/heroku-example
+docker.io/devopsdockeruh/heroku-example:latest
++ docker tag devopsdockeruh/heroku-example registry.heroku.com/jr-exercise-1-16/web
++ docker push registry.heroku.com/jr-exercise-1-16/web
+The push refers to repository [registry.heroku.com/jr-exercise-1-16/web]
+
+[1A[2K3ac96a6ba5b8: Preparing [1B
+[1A[2K4fd89569d353: Preparing [1B
+[1A[2K5f05d62a5f6d: Preparing [1B
+[1A[2K0c5e45eed8a0: Preparing [1B
+[1A[2K568cd074539f: Preparing [1B
+[1A[2K1e0f4e8ab9d2: Preparing [1B
+[1A[2K30157feee804: Preparing [1B
+[1A[2K8fcdbfe1b942: Preparing [1B
+[1A[2K33e4b5ecc45d: Preparing [1B
+[1A[2K50f1e13ab060: Preparing [1B
+[1A[2K56a89222b908: Preparing [1B
+[1A[2Ka89464ad2a8f: Preparing [1B
+[1A[2K76dfa41f0a1d: Preparing [1B
+[1A[2Kc240c542ed55: Preparing [1B
+[1A[2Kbadfbcebf7f8: Preparing [1B[10A[2K1e0f4e8ab9d2: Waiting [10B[9A[2K30157feee804: Waiting [9B[8A[2K8fcdbfe1b942: Waiting [8B[7A[2K33e4b5ecc45d: Waiting [7B[6A[2K50f1e13ab060: Waiting [6B[5A[2K56a89222b908: Waiting [5B[4A[2Ka89464ad2a8f: Waiting [4B[3A[2K76dfa41f0a1d: Waiting [3B[2A[2Kc240c542ed55: Waiting [2B[1A[2Kbadfbcebf7f8: Waiting [1B[14A[2K4fd89569d353: Layer already exists [14B[11A[2K568cd074539f: Layer already exists [11B[13A[2K5f05d62a5f6d: Layer already exists [13B[15A[2K3ac96a6ba5b8: Layer already exists [15B[12A[2K0c5e45eed8a0: Layer already exists [12B[10A[2K1e0f4e8ab9d2: Layer already exists [10B[8A[2K8fcdbfe1b942: Layer already exists [8B[6A[2K50f1e13ab060: Layer already exists [6B[9A[2K30157feee804: Layer already exists [9B[7A[2K33e4b5ecc45d: Layer already exists [7B[5A[2K56a89222b908: Layer already exists [5B[3A[2K76dfa41f0a1d: Layer already exists [3B[4A[2Ka89464ad2a8f: Layer already exists [4B[1A[2Kbadfbcebf7f8: Layer already exists [1B[2A[2Kc240c542ed55: Layer already exists [2Blatest: digest: sha256:7b355fd5a666655eeed4fd8b7836824e240611e7916841cfffd02a4cd10a1ce4 size: 3479
++ heroku container:release web --app jr-exercise-1-16
+[G[2K[?25lReleasing images web to jr-exercise-1-16... [38;5;104m⣾[0m 
+[1A[JReleasing images web to jr-exercise-1-16... [38;5;104m⣽[0m 
+ [33m▸[39m    The process type web was not updated, because it is already running the specified docker image.
+[2A[JReleasing images web to jr-exercise-1-16... done
+ [33m▸[39m    The process type web was not updated, because it is already running the specified docker image.
+[?25h[?25h+ echo
+
++ echo
+
++ echo Public View:
+Public View:
++ echo
+
++ echo https://jr-exercise-1-16.herokuapp.com
+https://jr-exercise-1-16.herokuapp.com
++ echo
+
++ echo
+
+
+Script done on 2019-12-30 18:40:36+0200

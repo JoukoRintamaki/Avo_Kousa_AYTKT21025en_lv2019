@@ -2,24 +2,21 @@
 set -x
 EXERCISE=2.02
 TAG=ports_exercise
-EXERCISEFOLDER=$EXERCISE.$TAG
 
-if [[ ! -e $EXERCISEFOLDER/docker-compose.yml ]]; then
-      mkdir -p $EXERCISEFOLDER
-      touch $EXERCISEFOLDER/docker-compose.yml
-fi
+mkdir -p $EXERCISE
 
-cat >$EXERCISEFOLDER/docker-compose.yml <<EOF
+cat >$EXERCISE/docker-compose.yml <<EOF
 version: "3"
 services:
-      $TAG:
-            image: devopsdockeruh/$TAG
-            ports:
-                  - 80:80
+ $TAG:
+  image: devopsdockeruh/$TAG
+  ports:
+  - 80:80
 EOF
 
-cd $EXERCISEFOLDER
+cd $EXERCISE
 docker-compose up --detach
 sleep 10s
 curl localhost:80
+echo
 docker-compose down
