@@ -1,16 +1,17 @@
-Script started on 2019-09-01 09:45:05+0300
-+ DOCKERFILEFOLDER=1.07.Dockerfile
-+ [[ ! -e 1.07.Dockerfile/Dockerfile ]]
+Script started on 2019-12-30 15:03:35+0200
++ EXERCISE=1.07
++ TAG=curler
++ mkdir -p 1.07
 + cat
-+ docker build --quiet --tag curler 1.07.Dockerfile
-sha256:8f92580fa2f74b0cc77a4eccbf2fd90208682b9a1a51a56f9a1893f5ec06e786
++ docker build --quiet --tag curler 1.07
+sha256:60dba3d1dd6738f6006ce030c5b9cbea6261ae2b44863da5d9ac1f217163fe9a
 + echo helsinki.fi
-+ docker run --interactive curler
++ docker run --interactive --name curler curler
 Input website:
 Searching..
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0    407      0 --:--:-- --:--:-- --:--:--   407
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0   3850      0 --:--:-- --:--:-- --:--:--  3850
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <html><head>
 <title>301 Moved Permanently</title>
@@ -18,13 +19,7 @@ Searching..
 <h1>Moved Permanently</h1>
 <p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
 </body></html>
-+ source dockercontainerprune.sh
-+++ docker ps --all --quiet
-++ docker stop a8dc6cea5186
-++ docker container prune --force
-Deleted Containers:
-a8dc6cea51862fa0a84c14f2623cd815bc698ed51b0b643de74ff3affe77d4ba
++ docker rm curler --force --volumes
+curler
 
-Total reclaimed space: 0B
-
-Script done on 2019-09-01 09:45:08+0300
+Script done on 2019-12-30 15:03:39+0200

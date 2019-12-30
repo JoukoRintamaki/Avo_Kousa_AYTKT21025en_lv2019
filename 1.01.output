@@ -1,35 +1,28 @@
-Script started on 2019-09-01 09:35:53+0300
+Script started on 2019-12-30 13:35:58+0200
 + docker image pull --quiet nginx
 docker.io/library/nginx:latest
 + docker run --detach --name nginx-01 nginx
-9cb4ad5a97f14ac4159d9247f809c29d25e160a6ce3dbb0fcafeba51477f208d
+fde0835f7ab40318f0c06c472feddc09f60a22e2a6fb41e65a995c28f6edeea6
 + docker run --detach --name nginx-02 nginx
-f51568dbdda687a7622d41a9ab4e56fc9dda15c5584f74ccd3c5a16785757da0
+a625fc9111ffef60100a40072afc056c01eaf9dcf37f8970148bf74066519e31
 + docker run --detach --name nginx-03 nginx
-f944bbc24ada2671c050f829619e144c6ec883a743315aeb09009dc5ec24469f
+c9f20977c2ed32b79f6b1df6a4d7d729e4972c92a0b73cd24faf688e6ebf5a33
 + docker ps --all
 CONTAINER ID        IMAGE               COMMAND                  CREATED                  STATUS                  PORTS               NAMES
-f944bbc24ada        nginx               "nginx -g 'daemon of…"   Less than a second ago   Up Less than a second   80/tcp              nginx-03
-f51568dbdda6        nginx               "nginx -g 'daemon of…"   1 second ago             Up Less than a second   80/tcp              nginx-02
-9cb4ad5a97f1        nginx               "nginx -g 'daemon of…"   2 seconds ago            Up 1 second             80/tcp              nginx-01
-+ docker stop nginx-01
+c9f20977c2ed        nginx               "nginx -g 'daemon of…"   Less than a second ago   Up Less than a second   80/tcp              nginx-03
+a625fc9111ff        nginx               "nginx -g 'daemon of…"   1 second ago             Up Less than a second   80/tcp              nginx-02
+fde0835f7ab4        nginx               "nginx -g 'daemon of…"   1 second ago             Up 1 second             80/tcp              nginx-01
++ docker stop nginx-01 nginx-02
 nginx-01
-+ docker stop nginx-02
 nginx-02
 + docker ps --all
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                              PORTS               NAMES
-f944bbc24ada        nginx               "nginx -g 'daemon of…"   2 seconds ago       Up 1 second                         80/tcp              nginx-03
-f51568dbdda6        nginx               "nginx -g 'daemon of…"   3 seconds ago       Exited (0) Less than a second ago                       nginx-02
-9cb4ad5a97f1        nginx               "nginx -g 'daemon of…"   4 seconds ago       Exited (0) 1 second ago                                 nginx-01
-+ source dockercontainerprune.sh
-+++ docker ps --all --quiet
-++ docker stop f944bbc24ada f51568dbdda6 9cb4ad5a97f1
-++ docker container prune --force
-Deleted Containers:
-f944bbc24ada2671c050f829619e144c6ec883a743315aeb09009dc5ec24469f
-f51568dbdda687a7622d41a9ab4e56fc9dda15c5584f74ccd3c5a16785757da0
-9cb4ad5a97f14ac4159d9247f809c29d25e160a6ce3dbb0fcafeba51477f208d
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                    PORTS               NAMES
+c9f20977c2ed        nginx               "nginx -g 'daemon of…"   2 seconds ago       Up 1 second               80/tcp              nginx-03
+a625fc9111ff        nginx               "nginx -g 'daemon of…"   3 seconds ago       Exited (0) 1 second ago                       nginx-02
+fde0835f7ab4        nginx               "nginx -g 'daemon of…"   3 seconds ago       Exited (0) 1 second ago                       nginx-01
++ docker rm nginx-01 nginx-02 nginx-03 --force --volumes
+nginx-01
+nginx-02
+nginx-03
 
-Total reclaimed space: 0B
-
-Script done on 2019-09-01 09:36:05+0300
+Script done on 2019-12-30 13:36:06+0200

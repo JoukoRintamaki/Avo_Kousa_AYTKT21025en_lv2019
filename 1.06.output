@@ -1,22 +1,17 @@
-Script started on 2019-09-01 09:44:58+0300
-+ DOCKERFILEFOLDER=1.06.Dockerfile
-+ [[ ! -e 1.06.Dockerfile/Dockerfile ]]
+Script started on 2019-12-30 14:42:48+0200
++ EXERCISE=1.06
++ TAG=docker-clock
++ mkdir -p 1.06
 + cat
-+ docker build --quiet --tag docker-clock 1.06.Dockerfile
-sha256:f92a458fcdfed46770c82bcd053b18dd87c604fc989a6faa038ebd94ae9d65ba
-+ docker run docker-clock
++ docker build --quiet --tag docker-clock 1.06
+sha256:15057f13f128d24afc78bebf7b5be1f45fef581f272fe4bcdda079e785d71b6f
++ docker run --name docker-clock docker-clock
 1
 2
 3
 4
 5
-+ source dockercontainerprune.sh
-+++ docker ps --all --quiet
-++ docker stop 0d6b17ca5d6c
-++ docker container prune --force
-Deleted Containers:
-0d6b17ca5d6ce64ab6c78ca148baad02a5283d129bb72e37dd904ae4e8ae81f2
++ docker rm docker-clock --force --volumes
+docker-clock
 
-Total reclaimed space: 0B
-
-Script done on 2019-09-01 09:45:05+0300
+Script done on 2019-12-30 14:42:56+0200
