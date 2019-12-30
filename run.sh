@@ -31,3 +31,4 @@ script -c ./3.02.sh 3.02.output --quiet
 script -c ./3.03.sh 3.03.output --quiet
 script -c ./3.04.sh 3.04.output --quiet
 script -c ./3.05.sh 3.05.output --quiet
+script -c ./3.06.sh 3.06.output --quiet

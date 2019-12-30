@@ -1,12 +1,27 @@
-Script started on 2019-12-30 20:42:13+0200
+Script started on 2019-12-30 22:16:01+0200
 + EXERCISE=3.06
 + TAG=jradoptopenjdk
 + mkdir -p 3.06
 + cat
 + docker build --quiet --tag jradoptopenjdk 3.06
-sha256:a586f680df2e6d1df1c59c9d484c102073ab6109fa54eba947ff43e7aca7a113
+sha256:b38d7f0afb909e0725d1b601f06fc7de6620ef0a7c6c2925af6d6e7c41e491d8
 + docker image ls
 + grep jradoptopenjdk
-jradoptopenjdk                             latest              a586f680df2e        Less than a second ago   621MB
+jradoptopenjdk                             latest              b38d7f0afb90        Less than a second ago   621MB
++ docker image rm jradoptopenjdk
+Untagged: jradoptopenjdk:latest
+Deleted: sha256:b38d7f0afb909e0725d1b601f06fc7de6620ef0a7c6c2925af6d6e7c41e491d8
++ cat
++ docker build --quiet --tag jradoptopenjdk 3.06
+sha256:6f08bbee44747148a370a3bbed8aec8a06cb358b3780cac553d49e1544695c1d
++ docker image ls
++ grep jradoptopenjdk
+jradoptopenjdk                             latest              6f08bbee4474        Less than a second ago   395MB
++ docker image rm jradoptopenjdk
+Untagged: jradoptopenjdk:latest
+Deleted: sha256:6f08bbee44747148a370a3bbed8aec8a06cb358b3780cac553d49e1544695c1d
+Deleted: sha256:5e54392420386899671e2c472ca77e2afeb053d6a8035e543af4bdd1d4fb2ed1
+Deleted: sha256:4dd71522c52478269c842fb9e9d972d161497903a5245d066fa39fe3bd92ad93
+Deleted: sha256:ba8a4054dda39c536e423d723a0a1f6d4edb891df95b611bc633c22e892aa126
 
-Script done on 2019-12-30 20:42:14+0200
+Script done on 2019-12-30 22:19:26+0200
