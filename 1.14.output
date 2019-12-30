@@ -1,14 +1,13 @@
-Script started on 2019-09-22 17:15:08+0300
+Script started on 2019-12-30 16:34:34+0200
 + EXERCISE=1.14
-+ DOCKERFILEFOLDER=1.14.Dockerfile
 + TAG=rails-example-project
 + PORT=3000
-+ [[ ! -e 1.14.Dockerfile/Dockerfile ]]
++ mkdir -p 1.14
 + cat
-+ docker build --quiet --tag rails-example-project 1.14.Dockerfile
-sha256:e39b7157ee55d23c8678e1fb812539882b8843451839577e526eb0775182fe4a
++ docker build --quiet --tag rails-example-project 1.14
+sha256:f3fa1ba2233a3da3df28381abce3add4157c7b7f1487b2193e4a39041977587e
 + docker run --name rails-example-project --detach --publish 3000:3000 rails-example-project
-b6aa336749a71d38e0b4ee36388a875e17998f9f58659c5e399e632d0a33f624
+9b0096c45b101d9d697cc9b80bd098576c6cd2a84004062c6ffba12a02bbdca2
 + sleep 25s
 + curl --url http://localhost:3000
 <!DOCTYPE html>
@@ -16,7 +15,7 @@ b6aa336749a71d38e0b4ee36388a875e17998f9f58659c5e399e632d0a33f624
   <head>
     <title>RailsExample</title>
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="4S92Kki/sHCgiPivfnYruaLQRXiTsGRHtdM2fNHu0q65WLM8/XFj2uPWgZqWjsOGWnv6L5QMbEjW9YP+S78SgQ==" />
+<meta name="csrf-token" content="8XK8WaYhath5Z8Q+MhOXfmhSxlDaarb7b0RasTfn1pJ09l7+yweUY9UEbVKWBH9Z7NFvq4Vak7CFbAGcbdzSxA==" />
     
 
     <link rel="stylesheet" media="all" href="/assets/presses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
@@ -34,11 +33,11 @@ b6aa336749a71d38e0b4ee36388a875e17998f9f58659c5e399e632d0a33f624
   <body>
     <h1>New Press</h1>
 
-<p> Total presses: 1 </p>
+<p> Total presses: 0 </p>
 
 <p id="notice"></p>
 
-<form action="/presses" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ppupkqGY/HO/sZa05G/ziYmmUjjBMZeEjE9gvF55BMXZISk+0SSnMbAuYVy28O5ufq2M+LUfZVpFYMr8mf1LWg==" />
+<form action="/presses" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ZEMnENa4F6u8j60ywNHVr7gq9OpKvKNpYQFWhxeKX3E+C3P/UdLVaqq/SPSMoz2Mj9E4vTOHmWnAEpdpinUfuA==" />
   
   <div class="actions">
     <input type="submit" name="commit" value="Press" data-disable-with="Press" />
@@ -49,13 +48,5 @@ b6aa336749a71d38e0b4ee36388a875e17998f9f58659c5e399e632d0a33f624
 
   </body>
 </html>
-+ source dockercontainerprune.sh
-+++ docker ps --all --quiet
-++ docker stop b6aa336749a7
-++ docker container prune --force
-Deleted Containers:
-b6aa336749a71d38e0b4ee36388a875e17998f9f58659c5e399e632d0a33f624
 
-Total reclaimed space: 2.249MB
-
-Script done on 2019-09-22 17:15:38+0300
+Script done on 2019-12-30 16:41:16+0200

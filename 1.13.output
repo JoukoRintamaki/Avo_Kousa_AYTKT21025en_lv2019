@@ -1,16 +1,13 @@
-Script started on 2019-09-22 15:04:04+0300
+Script started on 2019-12-30 16:28:06+0200
 + EXERCISE=1.13
-+ DOCKERFILEFOLDER=1.13.Dockerfile
 + TAG=spring-example-project
 + PORT=8080
-+ [[ ! -e 1.13.Dockerfile/Dockerfile ]]
-+ mkdir -p 1.13.Dockerfile
-+ touch 1.13.Dockerfile/Dockerfile
++ mkdir -p 1.13
 + cat
-+ docker build --quiet --tag spring-example-project 1.13.Dockerfile
-sha256:b4d2f9a95f2d48540a77fe676f1ae87555cfeb99bc02e6264798090fd6d1ce99
++ docker build --quiet --tag spring-example-project 1.13
+sha256:0520e129c5ad946c243ed46e251f35779525dc043e63b1af43fd76ad311127ae
 + docker run --name spring-example-project --detach --publish 8080:8080 spring-example-project
-4dbbf7fda55ae9baf6a25a172b8e17d117730cc51c0743edf18462289e6981ea
+d67575631dd2ec8a11920e4c1096b1e6b2fd5502cf624d0312344b036d444926
 + sleep 20s
 + curl --url http://localhost:8080
 <!DOCTYPE html>
@@ -27,13 +24,5 @@ sha256:b4d2f9a95f2d48540a77fe676f1ae87555cfeb99bc02e6264798090fd6d1ce99
         <p style="width: fit-content; margin: auto;"></p>
     </body>
 </html>
-+ source dockercontainerprune.sh
-+++ docker ps --all --quiet
-++ docker stop 4dbbf7fda55a
-++ docker container prune --force
-Deleted Containers:
-4dbbf7fda55ae9baf6a25a172b8e17d117730cc51c0743edf18462289e6981ea
 
-Total reclaimed space: 0B
-
-Script done on 2019-09-22 15:08:44+0300
+Script done on 2019-12-30 16:28:28+0200

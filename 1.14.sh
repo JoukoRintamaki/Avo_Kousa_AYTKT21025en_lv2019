@@ -1,15 +1,13 @@
 #!/bin/bash
 set -x
+
 EXERCISE=1.14
-DOCKERFILEFOLDER=$EXERCISE.Dockerfile
 TAG=rails-example-project
 PORT=3000
-if [[ ! -e $DOCKERFILEFOLDER/Dockerfile ]]; then
-	mkdir -p $DOCKERFILEFOLDER
-	touch $DOCKERFILEFOLDER/Dockerfile
-fi
 
-cat > $DOCKERFILEFOLDER/Dockerfile <<EOF
+mkdir -p $EXERCISE
+
+cat > $EXERCISE/Dockerfile <<EOF
 FROM ruby:2.6.0
 WORKDIR /usr/src/$TAG
 RUN mkdir -p /usr/src/$TAG
@@ -23,8 +21,8 @@ EXPOSE $PORT
 CMD ["rails","s"]
 EOF
 
-docker build --quiet --tag $TAG $DOCKERFILEFOLDER 
+docker build --quiet --tag $TAG $EXERCISE 
 docker run --name $TAG --detach --publish $PORT:$PORT $TAG
 sleep 25s
 curl --url http://localhost:$PORT
-source dockercontainerprune.sh
+docker rm $TAG --force --volumes
