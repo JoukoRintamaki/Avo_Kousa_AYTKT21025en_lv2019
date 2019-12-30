@@ -1,4 +1,4 @@
-Script started on 2019-12-30 17:25:56+0200
+Script started on 2019-12-30 17:39:38+0200
 + EXERCISE=1.15
 + TAG=helloworld
 + mkdir -p 1.15
@@ -8,7 +8,12 @@ sha256:b846be57622e0d70aceaa08112cfa6da92425ba187d984f43ac58063f5eadea5
 + docker run --name helloworld helloworld
 Hello World!
 + cat
++ docker tag helloworld joukorintamaki/helloworld
++ docker push joukorintamaki/helloworld
+The push refers to repository [docker.io/joukorintamaki/helloworld]
+
+[1A[2K6b27de954cca: Preparing [1B[1A[2K6b27de954cca: Mounted from library/alpine [1Blatest: digest: sha256:1ce8f68300e2160eeea92f7284da092dd813f0892b5925ca5181b221d5c59cdb size: 528
 + docker rm helloworld --force --volumes
 helloworld
 
-Script done on 2019-12-30 17:25:58+0200
+Script done on 2019-12-30 17:39:49+0200
