@@ -1,111 +1,9 @@
-Script started on 2019-12-28 17:52:34+0200
+Script started on 2019-12-29 16:48:50+0200
 Creating network "209_default" with the default driver
-Building backend-example-docker
-Step 1/8 : FROM node
- ---> f9cd651d1eb3
-Step 2/8 : ENV FRONT_URL=http://localhost
- ---> Running in 1c702ff86010
-Removing intermediate container 1c702ff86010
- ---> f60194f118e3
-Step 3/8 : WORKDIR /usr/src/backend-example-docker
- ---> Running in e2adda6808cd
-Removing intermediate container e2adda6808cd
- ---> f4f74747b7a3
-Step 4/8 : RUN mkdir -p /usr/src/backend-example-docker
- ---> Running in b0a228f8affc
-Removing intermediate container b0a228f8affc
- ---> 558f652f0632
-Step 5/8 : RUN git clone https://github.com/docker-hy/backend-example-docker /usr/src/backend-example-docker
- ---> Running in 33bc1bad2b06
-[91mCloning into '/usr/src/backend-example-docker'...
-[0mRemoving intermediate container 33bc1bad2b06
- ---> dadc77e468e2
-Step 6/8 : RUN cd /usr/src/backend-example-docker && npm install
- ---> Running in b0bc575f0578
-
-> nodemon@1.18.9 postinstall /usr/src/backend-example-docker/node_modules/nodemon
-> node bin/postinstall || exit 0
-
-[32mLove nodemon? You can now support the project via the open collective:[22m[39m
- > [96m[1mhttps://opencollective.com/nodemon/donate[0m
-
-[91mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
-[0m[91mnpm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
-[0m[91m
-[0madded 606 packages from 458 contributors and audited 5317 packages in 13.352s
-found 273 vulnerabilities (1 moderate, 272 high)
-  run `npm audit fix` to fix them, or `npm audit` for details
-Removing intermediate container b0bc575f0578
- ---> d5df1f8644c7
-Step 7/8 : EXPOSE 8000
- ---> Running in a6d409dbd417
-Removing intermediate container a6d409dbd417
- ---> d2cce6c6a1f8
-Step 8/8 : CMD ["npm","start"]
- ---> Running in 268f35d6ba49
-Removing intermediate container 268f35d6ba49
- ---> b2aed8547a9c
-[2K
-Successfully built b2aed8547a9c
-Successfully tagged backend-example-docker:latest
-[33mWARNING[0m: Image for service backend-example-docker was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
-Building frontend-example-docker
-Step 1/8 : FROM node
- ---> f9cd651d1eb3
-Step 2/8 : ENV API_URL=http://localhost:8000
- ---> Running in a636f71a660c
-Removing intermediate container a636f71a660c
- ---> c4c0a1708be4
-Step 3/8 : WORKDIR /usr/src/frontend-example-docker
- ---> Running in 9bc1db8cdb34
-Removing intermediate container 9bc1db8cdb34
- ---> 84a0a684d1f2
-Step 4/8 : RUN mkdir -p /usr/src/frontend-example-docker
- ---> Running in 5d26849cb2eb
-Removing intermediate container 5d26849cb2eb
- ---> b3b3651b6ad1
-Step 5/8 : RUN git clone https://github.com/docker-hy/frontend-example-docker /usr/src/frontend-example-docker
- ---> Running in 7b0b90634b85
-[91mCloning into '/usr/src/frontend-example-docker'...
-[0mRemoving intermediate container 7b0b90634b85
- ---> 18d7f3e22573
-Step 6/8 : RUN cd /usr/src/frontend-example-docker && npm install
- ---> Running in 49da94f15ba7
-[91mnpm [0m[91mWARN [0m[91moptional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.7 (node_modules/fsevents):
-[0m[91mnpm WARN[0m[91m notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.7: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
-[0m[91m
-[0madded 1029 packages from 415 contributors and audited 11636 packages in 25.028s
-found 313 vulnerabilities (6 moderate, 307 high)
-  run `npm audit fix` to fix them, or `npm audit` for details
-Removing intermediate container 49da94f15ba7
- ---> a6e1cac62167
-Step 7/8 : EXPOSE 5000
- ---> Running in fbc3ca6c39c7
-Removing intermediate container fbc3ca6c39c7
- ---> b9e42e599a0d
-Step 8/8 : CMD ["npm","start"]
- ---> Running in 2a6e6bc04dbe
-Removing intermediate container 2a6e6bc04dbe
- ---> babbff56443a
-[2K
-Successfully built babbff56443a
-Successfully tagged frontend-example-docker:latest
-[33mWARNING[0m: Image for service frontend-example-docker was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating redis ... 
 Creating nginx ... 
 Creating backend-example-docker ... 
-Creating redis                  ... 
 Creating postgres               ... 
 Creating frontend-example-docker ... 
-[5A[2KCreating nginx                   ... [32mdone[0m[5B[1A[2KCreating frontend-example-docker ... [32mdone[0m[1B[4A[2KCreating backend-example-docker  ... [32mdone[0m[4B[3A[2KCreating redis                   ... [32mdone[0m[3B[2A[2KCreating postgres                ... [32mdone[0m[2BStopping redis                   ... 
-Stopping frontend-example-docker ... 
-Stopping postgres                ... 
-Stopping backend-example-docker  ... 
-Stopping nginx                   ... 
-[2A[2KStopping backend-example-docker  ... [32mdone[0m[2B[5A[2KStopping redis                   ... [32mdone[0m[5B[1A[2KStopping nginx                   ... [32mdone[0m[1B[4A[2KStopping frontend-example-docker ... [32mdone[0m[4B[3A[2KStopping postgres                ... [32mdone[0m[3BRemoving redis                   ... 
-Removing frontend-example-docker ... 
-Removing postgres                ... 
-Removing backend-example-docker  ... 
-Removing nginx                   ... 
-[1A[2KRemoving nginx                   ... [32mdone[0m[1B[3A[2KRemoving postgres                ... [32mdone[0m[3B[2A[2KRemoving backend-example-docker  ... [32mdone[0m[2B[5A[2KRemoving redis                   ... [32mdone[0m[5B[4A[2KRemoving frontend-example-docker ... [32mdone[0m[4BRemoving network 209_default
-
-Script done on 2019-12-28 17:54:07+0200
+[5A[2KCreating redis                   ... [32mdone[0m[5B[4A[2KCreating nginx                   ... [32mdone[0m[4B[2A[2KCreating postgres                ... [32mdone[0m[2B[1A[2KCreating frontend-example-docker ... [32mdone[0m[1B[3A[2KCreating backend-example-docker  ... [32mdone[0m[3B
+Script done on 2019-12-29 16:49:23+0200

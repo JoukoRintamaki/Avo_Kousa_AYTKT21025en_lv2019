@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-EXERCISE=2.09
+EXERCISE=3.01
 
 if [[ ! -e $EXERCISE/docker-compose.yml ]]; then
 	mkdir -p $EXERCISE
@@ -21,12 +21,15 @@ if [[ ! -e $FOLDER/Dockerfile ]]; then
 fi
 
 cat >$FOLDER/Dockerfile <<EOF
-FROM node
+FROM node:alpine
 ENV FRONT_URL=http://localhost
+RUN apk add --no-cache git && \
+ mkdir -p /usr/src/$TAG && \
+ git clone https://github.com/docker-hy/$TAG /usr/src/$TAG && \
+ cd /usr/src/$TAG && \
+ npm install && \
+ apk del git
 WORKDIR /usr/src/$TAG
-RUN mkdir -p /usr/src/$TAG
-RUN git clone https://github.com/docker-hy/$TAG /usr/src/$TAG
-RUN cd /usr/src/$TAG && npm install
 EXPOSE $PORT
 CMD ["npm","start"]
 EOF
@@ -54,12 +57,15 @@ if [[ ! -e $FOLDER/Dockerfile ]]; then
 fi
 
 cat >$FOLDER/Dockerfile <<EOF
-FROM node
+FROM node:alpine
 ENV API_URL=http://localhost:8000
+RUN apk add --no-cache git && \
+ mkdir -p /usr/src/$TAG && \
+ git clone https://github.com/docker-hy/$TAG /usr/src/$TAG && \
+ cd /usr/src/$TAG && \
+ npm install && \
+ apk del git
 WORKDIR /usr/src/$TAG
-RUN mkdir -p /usr/src/$TAG
-RUN git clone https://github.com/docker-hy/$TAG /usr/src/$TAG
-RUN cd /usr/src/$TAG && npm install
 EXPOSE $PORT
 CMD ["npm","start"]
 EOF
@@ -131,7 +137,7 @@ http {
 EOF
 
 cd $EXERCISE
-docker-compose up --detach --quiet-pull
-sleep 30s
-docker-compose down
+docker image ls | grep example
 docker image remove frontend-example-docker backend-example-docker
+docker-compose build --parallel
+docker image ls | grep example

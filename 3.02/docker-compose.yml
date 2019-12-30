@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  yle-dl:
+    build: .
+    container_name: yle-dl
+    image: yle-dl
+    volumes:
+    - /c/Opt:/usr/src/yle-dl

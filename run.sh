@@ -22,3 +22,8 @@ script -c ./2.06.sh 2.06.output --quiet
 script -c ./2.07.sh 2.07.output --quiet
 script -c ./2.08.sh 2.08.output --quiet
 script -c ./2.09.sh 2.09.output --quiet
+script -c ./2.10.sh 2.10.output --quiet
+script -c ./3.01.sh 3.01.output --quiet
+script -c ./3.02.sh 3.02.output --quiet
+script -c ./3.03.sh 3.03.output --quiet
+script -c ./3.04.sh 3.04.output --quiet

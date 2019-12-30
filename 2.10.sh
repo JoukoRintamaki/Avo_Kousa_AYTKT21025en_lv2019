@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-EXERCISE=2.09
+EXERCISE=2.10
 
 if [[ ! -e $EXERCISE/docker-compose.yml ]]; then
 	mkdir -p $EXERCISE

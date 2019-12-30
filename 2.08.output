@@ -1,4 +1,4 @@
-Script started on 2019-12-29 12:25:24+0200
+Script started on 2019-12-29 15:01:28+0200
 frontend-example-docker is up-to-date
 backend-example-docker is up-to-date
 postgres is up-to-date
@@ -8,26 +8,49 @@ redis is up-to-date
 [1m[2mDetermining test suites to run...[1m[22m[999D[K
 [K[1A
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
-[K[1A[K[1A[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2m./[22m[1m2.08.test.js[22m ([0m[1m[41m12.394s[49m[22m[0m)
 
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
-[K[1A[K[1A  [1m● [22mTest suite failed to run
+[K[1A[K[1A  2.08
 
-    TypeError: Parameter "url" must be a string, not boolean
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A    [32m✓[39m [2m2.08 (5750ms)[22m
 
-      [2mat getRequestOptions ([22m../../../../.nvm/versions/node/v8.12.0/lib/node_modules/selenium-side-runner/node_modules/selenium-webdriver/http/index.js[2m:50:21)[22m
-      [2mat new HttpClient ([22m../../../../.nvm/versions/node/v8.12.0/lib/node_modules/selenium-side-runner/node_modules/selenium-webdriver/http/index.js[2m:92:21)[22m
-      [2mat Promise.resolve.then.url ([22m../../../../.nvm/versions/node/v8.12.0/lib/node_modules/selenium-side-runner/node_modules/selenium-webdriver/index.js[2m:640:24)[22m
-
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
+[K[1A[K[1A
 
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
 [K[1A[K[1A
 [0m[7m[33m[1m RUNS [22m[39m[27m[0m [2m./[22m[1m2.08.test.js[22m
-[K[1A[K[1A[999D[K[1mTest Suites: [22m[1m[31m1 failed[39m[22m, 1 total
-[1mTests:       [22m0 total
+[K[1A[K[1A[999D[K[1mTest Suites: [22m[1m[32m1 passed[39m[22m, 1 total
+[1mTests:       [22m[1m[32m1 passed[39m[22m, 1 total
 [1mSnapshots:   [22m0 total
-[1mTime:[22m        0.252s
+[1mTime:[22m        12.628s, estimated 13s
 [2mRan all test suites[22m[2m.[22m
 
 
-Script done on 2019-12-29 12:25:58+0200
+Script done on 2019-12-29 15:02:14+0200

@@ -1,0 +1,9 @@
+Script started on 2019-12-29 19:40:15+0200
+Creating network "210_default" with the default driver
+Creating redis ... 
+Creating postgres ... 
+Creating backend-example-docker ... 
+Creating nginx                  ... 
+Creating frontend-example-docker ... 
+[5A[2KCreating redis                   ... [32mdone[0m[5B[4A[2KCreating postgres                ... [32mdone[0m[4B[3A[2KCreating backend-example-docker  ... [32mdone[0m[3B[2A[2KCreating nginx                   ... [32mdone[0m[2B[1A[2KCreating frontend-example-docker ... [32mdone[0m[1B
+Script done on 2019-12-29 19:40:48+0200

@@ -1,0 +1,85 @@
+Script started on 2019-12-30 00:48:56+0200
++ EXERCISE=3.04
++ [[ ! -e 3.04/docker-compose.yml ]]
++ cat
++ TAG=backend-example-docker
++ FOLDER=3.04/backend-example-docker
++ PORT=8000
++ [[ ! -e 3.04/backend-example-docker/Dockerfile ]]
++ cat
++ cat
++ TAG=frontend-example-docker
++ FOLDER=3.04/frontend-example-docker
++ PORT=5000
++ [[ ! -e 3.04/frontend-example-docker/Dockerfile ]]
++ cat
++ cat
++ TAG=redis
++ cat
++ TAG=postgres
++ cat
++ TAG=nginx
++ cat
++ cat
++ cat
++ cd 3.04
++ docker-compose build --parallel
+redis uses an image, skipping
+postgres uses an image, skipping
+nginx uses an image, skipping
+Building backend-example-docker  ... 
+Building frontend-example-docker ... 
+Building backend-example-docker
+Building frontend-example-docker
+Step 1/7 : FROM node:alpine
+ ---> e1495e4ac50d
+Step 2/7 : ENV API_URL=http://localhost:8000
+ ---> Using cache
+ ---> b38097343de3
+Step 3/7 : RUN apk add --no-cache git &&  mkdir -p /usr/src/frontend-example-docker &&  git clone https://github.com/docker-hy/frontend-example-docker /usr/src/frontend-example-docker &&  cd /usr/src/frontend-example-docker &&  npm install &&  apk del git &&  addgroup -S appgroup && adduser -S appuser -G appgroup &&  chown --recursive appuser /usr/src/frontend-example-docker
+ ---> Using cache
+ ---> b6479f3f9c5e
+Step 4/7 : USER appuser
+ ---> Using cache
+ ---> 2430bdc5059b
+Step 5/7 : WORKDIR /usr/src/frontend-example-docker
+ ---> Using cache
+ ---> 145a6758621c
+Step 6/7 : EXPOSE 5000
+ ---> Using cache
+ ---> 6f923d4fcc4d
+Step 7/7 : CMD ["npm","start"]
+ ---> Using cache
+ ---> 1a1e31ccad50
+[2K
+Successfully built 1a1e31ccad50
+Step 1/7 : FROM node:alpine
+Successfully tagged frontend-example-docker:latest
+ ---> e1495e4ac50d
+Step 2/7 : ENV FRONT_URL=http://localhost
+[1A[2KBuilding frontend-example-docker ... [32mdone[0m ---> Using cache
+[1B ---> b9bd9e4b8049
+Step 3/7 : RUN apk add --no-cache git &&  mkdir -p /usr/src/backend-example-docker &&  git clone https://github.com/docker-hy/backend-example-docker /usr/src/backend-example-docker &&  cd /usr/src/backend-example-docker &&  npm install &&  apk del git &&  addgroup -S appgroup && adduser -S appuser -G appgroup &&  chown --recursive appuser /usr/src/backend-example-docker
+ ---> Using cache
+ ---> c64f96490edf
+Step 4/7 : USER appuser
+ ---> Using cache
+ ---> d5f7c6c2a8f6
+Step 5/7 : WORKDIR /usr/src/backend-example-docker
+ ---> Using cache
+ ---> 2643a807b778
+Step 6/7 : EXPOSE 8000
+ ---> Using cache
+ ---> fabec801cfac
+Step 7/7 : CMD ["npm","start"]
+ ---> Using cache
+ ---> ef22d26f63ba
+[2K
+Successfully built ef22d26f63ba
+Successfully tagged backend-example-docker:latest
+[2A[2KBuilding backend-example-docker  ... [32mdone[0m[2B+ docker image ls
++ grep example
+frontend-example-docker   latest              1a1e31ccad50        8 minutes ago       266MB
+backend-example-docker    latest              ef22d26f63ba        8 minutes ago       170MB
+
+Script done on 2019-12-30 00:48:58+0200
