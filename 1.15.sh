@@ -15,9 +15,15 @@ docker build --quiet --tag $TAG $EXERCISE
 docker run --name $TAG $TAG
 
 cat > $EXERCISE/ReadMe.md << EOF
-# How to run
+# Description
 
 Docker print "Hello World!" string.
+
+## How to run
+
+- save Dockerfile
+- build docker image \`docker build -tag hello\`
+- run \`docker run hello\`
 EOF
 
 docker rm $TAG --force --volumes
