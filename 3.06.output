@@ -1,0 +1,12 @@
+Script started on 2019-12-30 20:42:13+0200
++ EXERCISE=3.06
++ TAG=jradoptopenjdk
++ mkdir -p 3.06
++ cat
++ docker build --quiet --tag jradoptopenjdk 3.06
+sha256:a586f680df2e6d1df1c59c9d484c102073ab6109fa54eba947ff43e7aca7a113
++ docker image ls
++ grep jradoptopenjdk
+jradoptopenjdk                             latest              a586f680df2e        Less than a second ago   621MB
+
+Script done on 2019-12-30 20:42:14+0200
