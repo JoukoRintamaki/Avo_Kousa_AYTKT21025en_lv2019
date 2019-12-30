@@ -1,4 +1,4 @@
-Script started on 2019-12-30 17:20:35+0200
+Script started on 2019-12-30 17:21:47+0200
 + EXERCISE=1.15
 + TAG=helloworld
 + mkdir -p 1.15
@@ -11,4 +11,4 @@ Hello World!
 + docker rm helloworld --force --volumes
 helloworld
 
-Script done on 2019-12-30 17:20:37+0200
+Script done on 2019-12-30 17:21:48+0200
