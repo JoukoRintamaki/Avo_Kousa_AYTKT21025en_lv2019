@@ -1,4 +1,4 @@
-Script started on 2019-12-30 17:15:31+0200
+Script started on 2019-12-30 17:17:56+0200
 + EXERCISE=1.15
 + TAG=helloworld
 + mkdir -p 1.15
@@ -8,9 +8,7 @@ sha256:b846be57622e0d70aceaa08112cfa6da92425ba187d984f43ac58063f5eadea5
 + docker run --name helloworld helloworld
 Hello World!
 + cat
-./1.15.sh: line 17: bad substitution: no closing "`" in `docker run --name $TAG $TAG
-
 + docker rm helloworld --force --volumes
 helloworld
 
-Script done on 2019-12-30 17:15:32+0200
+Script done on 2019-12-30 17:17:58+0200
