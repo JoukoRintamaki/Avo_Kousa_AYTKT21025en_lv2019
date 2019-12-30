@@ -15,6 +15,7 @@ script -c ./1.13.sh 1.13.output --quiet
 script -c ./1.14.sh 1.14.output --quiet
 script -c ./1.15.sh 1.15.output --quiet
 script -c ./1.16.sh 1.16.output --quiet
+script -c ./1.17.sh 1.17.output --quiet
 script -c ./2.01.sh 2.01.output --quiet
 script -c ./2.02.sh 2.02.output --quiet
 script -c ./2.03.sh 2.03.output --quiet
@@ -29,3 +30,4 @@ script -c ./3.01.sh 3.01.output --quiet
 script -c ./3.02.sh 3.02.output --quiet
 script -c ./3.03.sh 3.03.output --quiet
 script -c ./3.04.sh 3.04.output --quiet
+script -c ./3.05.sh 3.05.output --quiet

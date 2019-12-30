@@ -1,0 +1,34 @@
+Script started on 2019-12-30 20:22:51+0200
++ EXERCISE=1.17
++ TAG=jradoptopenjdk
++ mkdir -p 1.17
++ cat
++ docker build --quiet --tag jradoptopenjdk 1.17
+sha256:0d2265baa9c6f157245a47d23c9cc107b869ac6da08ed2883b9e4d0522b19930
++ docker run --name jradoptopenjdk jradoptopenjdk
++ docker tag jradoptopenjdk joukorintamaki/jradoptopenjdk
++ docker push joukorintamaki/jradoptopenjdk
+The push refers to repository [docker.io/joukorintamaki/jradoptopenjdk]
+
+[1A[2K1af458f50b07: Preparing [1B
+[1A[2K55e55055a449: Preparing [1B
+[1A[2Kfe2fc29b6b8e: Preparing [1B
+[1A[2Kc06e64fd5794: Preparing [1B
+[1A[2K1798f71aaf1d: Preparing [1B
+[1A[2K918efb8f161b: Preparing [1B
+[1A[2K27dd43ea46a8: Preparing [1B
+[1A[2K9f3bfcc4a1a8: Preparing [1B
+[1A[2K2dc9f76fb25b: Preparing [1B[4A[2K918efb8f161b: Waiting [4B[3A[2K27dd43ea46a8: Waiting [3B[2A[2K9f3bfcc4a1a8: Waiting [2B[1A[2K2dc9f76fb25b: Waiting [1B[9A[2K1af458f50b07: Layer already exists [9B[7A[2Kfe2fc29b6b8e: Layer already exists [7B[8A[2K55e55055a449: Layer already exists [8B[6A[2Kc06e64fd5794: Layer already exists [6B[5A[2K1798f71aaf1d: Layer already exists [5B[4A[2K918efb8f161b: Layer already exists [4B[2A[2K9f3bfcc4a1a8: Layer already exists [2B[3A[2K27dd43ea46a8: Layer already exists [3B[1A[2K2dc9f76fb25b: Layer already exists [1Blatest: digest: sha256:4c3f319f0995f37627f316d2dcf922787a033363955e707318cf1404bd65a237 size: 2204
++ set +x
+
+
+Public View:
+
+https://hub.docker.com/r/joukorintamaki/jradoptopenjdk
+
+Description:
+Ubuntu + Adopt OpenJdk Ready to use development environment
+
+jradoptopenjdk
+
+Script done on 2019-12-30 20:22:58+0200
