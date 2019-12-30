@@ -17,8 +17,7 @@ docker run --name $TAG $TAG
 cat > $EXERCISE/ReadMe.md << EOF
 # How to run
 
-Docker print "Hello World!" string when
-\`\`\` docker run --name $TAG $TAG
+Docker print "Hello World!" string when \`docker run --name $TAG $TAG\`
 EOF
 
 docker rm $TAG --force --volumes
