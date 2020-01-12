@@ -1,0 +1,235 @@
+apiVersion: v1
+items:
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+      name: backend-example-docker
+    spec:
+      ports:
+        - name: "8000"
+          port: 8000
+          targetPort: 8000
+      selector:
+    status:
+      loadBalancer: {}
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+      name: frontend-example-docker
+    spec:
+      ports:
+        - name: "5000"
+          port: 5000
+          targetPort: 5000
+      selector:
+    status:
+      loadBalancer: {}
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+      name: nginxservice
+    spec:
+      ports:
+        - name: "80"
+          port: 80
+          targetPort: 80
+      selector:
+    status:
+      loadBalancer: {}
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+      name: redis
+    spec:
+      ports:
+        - name: "6379"
+          port: 6379
+          targetPort: 6379
+      selector:
+    status:
+      loadBalancer: {}
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+      name: backend-example-docker
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: backend-example-docker
+      strategy: {}
+      template:
+        metadata:
+          annotations:
+          creationTimestamp: null
+          labels:
+            app: backend-example-docker
+        spec:
+          containers:
+            - env:
+                - name: DB_HOST
+                  value: postgres
+                - name: DB_PASSWORD
+                  value: salasana
+                - name: DB_USERNAME
+                  value: postgres
+                - name: REDIS
+                  value: redis
+              image: joukorintamaki/backend-example-docker
+              name: backend-example-docker
+              ports:
+                - containerPort: 8000
+          restartPolicy: Always
+    status: {}
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+      name: frontend-example-docker
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: frontend-example-docker
+      strategy: {}
+      template:
+        metadata:
+          annotations:
+          creationTimestamp: null
+          labels:
+            app: frontend-example-docker
+        spec:
+          containers:
+            - image: joukorintamaki/frontend-example-docker
+              name: frontend-example-docker
+              ports:
+                - containerPort: 5000
+          restartPolicy: Always
+    status: {}
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+      name: nginxservice
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: nginxservice
+      strategy: {}
+      template:
+        metadata:
+          annotations:
+          creationTimestamp: null
+          labels:
+            app: nginxservice
+        spec:
+          containers:
+            - env:
+                - name: NGINX_PORT
+                  value: "80"
+              image: joukorintamaki/nginxservice
+              name: nginxservice
+              ports:
+                - containerPort: 80
+          restartPolicy: Always
+    status: {}
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+      name: postgres
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          apps: postgres
+      strategy:
+        type: Recreate
+      template:
+        metadata:
+          annotations:
+          creationTimestamp: null
+          labels:
+            apps: postgres
+        spec:
+          containers:
+            - env:
+                - name: POSTGRES_PASSWORD
+                  value: salasana
+                - name: POSTGRES_USERNAME
+                  value: postgres
+              image: postgres:alpine
+              name: postgres
+              volumeMounts:
+                - mountPath: /var/lib/postgresql/data
+                  name: database
+          restartPolicy: Always
+          volumes:
+            - name: database
+              persistentVolumeClaim:
+                claimName: database
+    status: {}
+  - apiVersion: v1
+    kind: PersistentVolumeClaim
+    metadata:
+      creationTimestamp: null
+      labels:
+      name: database
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 100Mi
+    status: {}
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      annotations:
+      creationTimestamp: null
+      labels:
+      name: redis
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          apps: redis
+      strategy: {}
+      template:
+        metadata:
+          annotations:
+          creationTimestamp: null
+          labels:
+           apps: redis
+        spec:
+          containers:
+            - image: redis:alpine
+              name: redis
+              ports:
+                - containerPort: 6379
+          restartPolicy: Always
+    status: {}
+kind: List
+metadata: {}
