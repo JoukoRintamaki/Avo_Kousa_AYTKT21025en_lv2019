@@ -1,24 +1,66 @@
-Script started on 2020-01-12 11:23:48+0200
+Script started on 2020-01-15 21:25:05+0200
++ curl -sL https://aka.ms/InstallAzureCLIDeb
++ sudo bash
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-0% [Working]            Hit:1 http://packages.microsoft.com/repos/vscode stable InRelease
-0% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Connected to packages.microsoft.com (13.80.10.205)]                                                                                                                         Hit:2 http://archive.ubuntu.com/ubuntu bionic InRelease
-                                                                                                                         Hit:3 https://download.docker.com/linux/ubuntu bionic InRelease
-0% [Waiting for headers] [Waiting for headers] [Connecting to cli-assets.heroku.com] [Connected to packages.microsoft.com (13.80.10.205)]0% [1 InRelease gpgv 3959 B] [Waiting for headers] [Waiting for headers] [Connecting to cli-assets.heroku.com] [Connected to packages.microsoft.com (13.80.10.205)]                                                                                                                                                                   Hit:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
-                                                                                                                                                                   0% [1 InRelease gpgv 3959 B] [Waiting for headers] [Connecting to cli-assets.heroku.com (13.32.43.112)] [Waiting for headers]                                                                                                                             Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease
-0% [1 InRelease gpgv 3959 B] [Waiting for headers] [Connecting to cli-assets.heroku.com (13.32.43.112)] [Waiting for headers]                                                                                                                             Hit:6 https://packages.microsoft.com/repos/azure-cli bionic InRelease
-                                                                                                                             0% [1 InRelease gpgv 3959 B] [Waiting for headers] [Connected to cli-assets.heroku.com (13.32.43.112)]                                                                                                      Hit:7 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
-                                                                                                      0% [1 InRelease gpgv 3959 B] [Connected to cli-assets.heroku.com (13.32.43.112)]                                                                                0% [1 InRelease gpgv 3959 B]                            Hit:8 https://cli-assets.heroku.com/branches/stable/apt ./ InRelease
-0% [1 InRelease gpgv 3959 B]0% [1 InRelease gpgv 3959 B]                            0% [Working]0% [2 InRelease gpgv 242 kB]0% [2 InRelease gpgv 242 kB]                            0% [Working]0% [3 InRelease gpgv 64.4 kB]0% [3 InRelease gpgv 64.4 kB]                             0% [Working]0% [4 InRelease gpgv 88.7 kB]0% [4 InRelease gpgv 88.7 kB]                             0% [Working]0% [5 InRelease gpgv 88.7 kB]0% [5 InRelease gpgv 88.7 kB]                             0% [Working]0% [6 InRelease gpgv 3964 B]0% [6 InRelease gpgv 3964 B]                            0% [Working]0% [7 InRelease gpgv 74.6 kB]0% [7 InRelease gpgv 74.6 kB]                             0% [Working]0% [8 InRelease gpgv 2533 B]0% [8 InRelease gpgv 2533 B]                            20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 46%Reading package lists... 46%Reading package lists... 67%Reading package lists... 67%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 73%Reading package lists... 73%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 83%Reading package lists... 83%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 90%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+
+0% [Working]
+            
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+
+0% [Waiting for headers] [Waiting for headers] [Connected to cli-assets.heroku.com (13.32.43.103)] [Connected to download.docker.com (2600:9000:2118:5a00:3:db06:4200:93a1)] [Connected to packages.microsoft.com (13.80.10.205)] [Waiting for headers]
+                                                                                                                                                                                                                                                       
+Hit:2 http://packages.microsoft.com/repos/vscode stable InRelease
+
+0% [Waiting for headers] [Waiting for headers] [Connected to cli-assets.heroku.com (13.32.43.103)] [Connected to download.docker.com (2600:9000:2118:5a00:3:db06:4200:93a1)] [Connected to packages.microsoft.com (13.80.10.205)] [Waiting for headers]
+                                                                                                                                                                                                                                                       
+Hit:3 http://archive.ubuntu.com/ubuntu bionic InRelease
+
+                                                                                                                                                                                                                                                       
+Hit:4 http://security.ubuntu.com/ubuntu bionic-security InRelease
+
+                                                                                                                                                                                                                                                       
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release
+
+                                                                                                                                                                                                                                                       
+0% [Waiting for headers] [Waiting for headers] [Waiting for headers] [Connected to packages.microsoft.com (13.80.10.205)]
+0% [2 InRelease gpgv 3959 B] [Waiting for headers] [Waiting for headers] [Waiting for headers] [Connected to packages.microsoft.com (13.80.10.205)]
+                                                                                                                                                   
+0% [2 InRelease gpgv 3959 B] [Waiting for headers] [Waiting for headers] [Connected to packages.microsoft.com (13.80.10.205)]
+                                                                                                                             
+Hit:7 https://download.docker.com/linux/ubuntu bionic InRelease
+
+0% [2 InRelease gpgv 3959 B] [Waiting for headers] [Waiting for headers] [Connected to packages.microsoft.com (13.80.10.205)]
+                                                                                                                             
+Hit:6 https://cli-assets.heroku.com/branches/stable/apt ./ InRelease
+
+                                                                                                                             
+0% [2 InRelease gpgv 3959 B] [Waiting for headers] [Connected to packages.microsoft.com (13.80.10.205)]
+                                                                                                       
+Hit:8 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
+
+                                                                                                       
+0% [2 InRelease gpgv 3959 B] [Waiting for headers]
+                                                  
+Hit:9 https://packages.microsoft.com/repos/azure-cli bionic InRelease
+
+0% [2 InRelease gpgv 3959 B] [Waiting for headers]
+                                                  
+Hit:10 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
+
+
 apt-get install -y apt-transport-https lsb-release gnupg curl
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
+
+
+Building dependency tree       
+
+Reading state information... Done
+
 lsb-release is already the newest version (9.20170808ubuntu1).
 curl is already the newest version (7.58.0-2ubuntu3.8).
 gnupg is already the newest version (2.2.4-1ubuntu1.2).
 apt-transport-https is already the newest version (1.6.12).
-0 upgraded, 0 newly installed, 0 to remove and 6 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 19 not upgraded.
 set +v
 curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 gpg: WARNING: unsafe ownership on homedir '/home/jouko/.gnupg'
@@ -27,59 +69,88 @@ CLI_REPO=$(lsb_release -cs)
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ ${CLI_REPO} main" \
     > /etc/apt/sources.list.d/azure-cli.list
 apt-get update
-0% [Working]            Hit:1 http://packages.microsoft.com/repos/vscode stable InRelease
-0% [Connecting to archive.ubuntu.com] [Connecting to security.ubuntu.com (2001:67c:1562::16)] [Connected to cli-assets.heroku.com (13.32.43.8)] [Connected to download.docker.com (2600:9000:2118:3800:3:db06:4200:93a1)] [Connected to packages                                                                                                                                                                                                                                                0% [Connecting to archive.ubuntu.com (2001:67c:1360:8001::17)] [Waiting for headers] [Waiting for headers] [Connected to packages.microsoft.com (13.80.10.205)]0% [1 InRelease gpgv 3959 B] [Connecting to archive.ubuntu.com (2001:67c:1360:8001::17)] [Waiting for headers] [Waiting for headers] [Waiting for headers] [Connected to packages.microsoft.com (13.80.10.205)]                                                                                                                                                                                                               Hit:3 https://download.docker.com/linux/ubuntu bionic InRelease
-                                                                                                                                                                                                               0% [1 InRelease gpgv 3959 B] [Connecting to archive.ubuntu.com (2001:67c:1360:8001::17)] [Waiting for headers] [Waiting for headers] [Waiting for headers]                                                                                                                                                          Hit:2 https://cli-assets.heroku.com/branches/stable/apt ./ InRelease
-                                                                                                                                                          0% [1 InRelease gpgv 3959 B] [Connecting to archive.ubuntu.com (2001:67c:1360:8001::17)] [Waiting for headers] [Waiting for headers]                                                                                                                                    Hit:4 https://packages.microsoft.com/repos/azure-cli bionic InRelease
-                                                                                                                                    0% [1 InRelease gpgv 3959 B] [Waiting for headers] [Waiting for headers]                                                                        Hit:5 http://archive.ubuntu.com/ubuntu bionic InRelease
-                                                                        0% [1 InRelease gpgv 3959 B] [Waiting for headers]                                                  Hit:6 http://security.ubuntu.com/ubuntu bionic-security InRelease
-0% [1 InRelease gpgv 3959 B] [Waiting for headers]                                                  Hit:7 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
-                                                  0% [1 InRelease gpgv 3959 B]                            Hit:8 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
-0% [1 InRelease gpgv 3959 B]0% [1 InRelease gpgv 3959 B]                            0% [Working]0% [3 InRelease gpgv 64.4 kB]0% [3 InRelease gpgv 64.4 kB]                             0% [Working]0% [2 InRelease gpgv 2533 B]0% [2 InRelease gpgv 2533 B]                            0% [Working]0% [4 InRelease gpgv 3964 B]0% [4 InRelease gpgv 3964 B]                            0% [Working]0% [5 InRelease gpgv 242 kB]0% [5 InRelease gpgv 242 kB]                            0% [Working]0% [6 InRelease gpgv 88.7 kB]0% [6 InRelease gpgv 88.7 kB]                             0% [Working]0% [7 InRelease gpgv 88.7 kB]0% [7 InRelease gpgv 88.7 kB]                             0% [Working]0% [8 InRelease gpgv 74.6 kB]0% [8 InRelease gpgv 74.6 kB]                             20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 46%Reading package lists... 46%Reading package lists... 67%Reading package lists... 67%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 73%Reading package lists... 73%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 83%Reading package lists... 83%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 88%Reading package lists... 89%Reading package lists... 89%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+
+0% [Working]
+            
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+
+0% [Waiting for headers] [Waiting for headers] [Connecting to cli-assets.heroku.com] [Connected to download.docker.com (2600:9000:2118:5a00:3:db06:4200:93a1)] [Connected to packages.microsoft.com (13.80.10.205)] [Waiting for headers]
+                                                                                                                                                                                                                                         
+Hit:2 http://packages.microsoft.com/repos/vscode stable InRelease
+
+                                                                                                                                                                                                                                         
+0% [Waiting for headers] [Waiting for headers] [Connecting to cli-assets.heroku.com] [Waiting for headers] [Connected to packages.microsoft.com (13.80.10.205)] [Waiting for headers]
+                                                                                                                                                                                     
+Hit:3 http://archive.ubuntu.com/ubuntu bionic InRelease
+
+                                                                                                                                                                                     
+Hit:4 https://download.docker.com/linux/ubuntu bionic InRelease
+
+                                                                                                                                                                                     
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release
+
+                                                                                                                                                                                     
+0% [Waiting for headers] [Waiting for headers] [Connected to cli-assets.heroku.com (13.32.43.103)] [Connected to packages.microsoft.com (13.80.10.205)]
+                                                                                                                                                       
+Hit:6 http://security.ubuntu.com/ubuntu bionic-security InRelease
+
+                                                                                                                                                       
+0% [Waiting for headers] [Connected to cli-assets.heroku.com (13.32.43.103)] [Connected to packages.microsoft.com (13.80.10.205)]
+0% [2 InRelease gpgv 3959 B] [Waiting for headers] [Connected to cli-assets.heroku.com (13.32.43.103)] [Connected to packages.microsoft.com (13.80.10.205)]
+                                                                                                                                                           
+Hit:7 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
+
+                                                                                                                                                           
+0% [2 InRelease gpgv 3959 B] [Connected to cli-assets.heroku.com (13.32.43.103)] [Waiting for headers]
+                                                                                                      
+Hit:8 https://packages.microsoft.com/repos/azure-cli bionic InRelease
+
+0% [2 InRelease gpgv 3959 B] [Waiting for headers] [Connected to cli-assets.heroku.com (13.32.43.103)]
+                                                                                                      
+0% [2 InRelease gpgv 3959 B] [Waiting for headers]
+                                                  
+Hit:10 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
+
+0% [2 InRelease gpgv 3959 B] [Waiting for headers]
+                                                  
+Hit:9 https://cli-assets.heroku.com/branches/stable/apt ./ InRelease
+
+
+Reading package lists... Done
+
 set +v
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-azure-cli is already the newest version (2.0.79-1~bionic).
-0 upgraded, 0 newly installed, 0 to remove and 6 not upgraded.
-[6n[?25l[m]0;C:\Windows\system32\cmd.exe[?25h[?25l'\\wsl$\Ubuntu-18.04\home\jouko\Projects\Avo_Kousa_AYTKT21025en_lv2019'[170X[170C[?25h[?25l
-CMD.EXE was started with the above path as the current directory.[176X[176C[?25h[?25l
-UNC paths are not supported.  Defaulting to Windows directory.[179X[179C[?25h[?25l
-[241X[241C[?25h[?25l[61;1H'\\wsl$\Ubuntu-18.04\home\jouko\Projects\Avo_Kousa_AYTKT21025en_lv2019'[170X[170C
-CMD.EXE was started with the above path as the current directory.[176X[176C
-UNC paths are not supported.  Defaulting to Windows directory.[179X[179C
-[241X[241C[?25h[?25l[61;1H'\\wsl$\Ubuntu-18.04\home\jouko\Projects\Avo_Kousa_AYTKT21025en_lv2019'[170X[170C
-CMD.EXE was started with the above path as the current directory.[176X[176C
-UNC paths are not supported.  Defaulting to Windows directory.[179X[179C
-[241X[241C[?25h[33mYou have logged in. Now let us find all the subscriptions to which you have access...[0m
-[
-  {
-    "cloudName": "AzureCloud",
-    "id": "c4fb7123-8f33-48ae-9d1b-8ec747ad51b6",
-    "isDefault": false,
-    "name": "Access to Azure Active Directory",
-    "state": "Enabled",
-    "tenantId": "f0d54542-d85f-41b2-ac20-1ec9ee6c0630",
-    "user": {
-      "name": "jouko.rintamaki@live.fi",
-      "type": "user"
-    }
-  },
-  {
-    "cloudName": "AzureCloud",
-    "id": "90770ece-195c-4c66-b939-887b721beaa1",
-    "isDefault": true,
-    "name": "Visual Studio Professional with MSDN",
-    "state": "Enabled",
-    "tenantId": "8810276f-35ec-4dd2-acd9-ee38d0b8b8ee",
-    "user": {
-      "name": "jouko.rintamaki@live.fi",
-      "type": "user"
-    }
-  }
-]
-[0m[0m{
-  "id": "/subscriptions/90770ece-195c-4c66-b939-887b721beaa1/resourceGroups/rg-devopswithdocker2019",
+
+Reading state information... Done
+
+azure-cli is already the newest version (2.0.80-1~bionic).
+0 upgraded, 0 newly installed, 0 to remove and 19 not upgraded.
++ az login --output none
+[6n[?25l[m]0;C:\Windows\system32\cmd.exe[?25h[?25l'\\wsl$\Ubuntu-18.04\home\jouko\Projects\Avo_Kousa_AYTKT21025en_lv2019'[185X[185C
+[?25h[?25l
+CMD.EXE was started with the above path as the current directory.[191X[191C
+[?25h[?25l
+UNC paths are not supported.  Defaulting to Windows directory.[194X[194C
+[?25h[?25l
+[256X[256C
+[?25h[?25l[50;1H'\\wsl$\Ubuntu-18.04\home\jouko\Projects\Avo_Kousa_AYTKT21025en_lv2019'[185X[185C
+CMD.EXE was started with the above path as the current directory.[191X[191C
+UNC paths are not supported.  Defaulting to Windows directory.[194X[194C
+[256X[256C
+[?25h[?25l[50;1H'\\wsl$\Ubuntu-18.04\home\jouko\Projects\Avo_Kousa_AYTKT21025en_lv2019'[185X[185C
+CMD.EXE was started with the above path as the current directory.[191X[191C
+UNC paths are not supported.  Defaulting to Windows directory.[194X[194C
+[256X[256C
+[?25h[33mYou have logged in. Now let us find all the subscriptions to which you have access...[0m
+[0m+ az account set --subscription XXXXXXXXXXXXXXX --output none
+[0m+ PROJECT=devopswithdocker2019
++ LOCATION=westeurope
++ RESOURCE_GROUP=rg-devopswithdocker2019
++ AKS_NAME=aks-devopswithdocker2019
+++ az aks get-versions -l westeurope --query 'orchestrators[-1].orchestratorVersion' -o tsv
++ AKSVERSION=1.17.0
++ az group create --name rg-devopswithdocker2019 --location westeurope
+{
+  "id": "/subscriptions/XXXXXXXXXXXXXXX/resourceGroups/rg-devopswithdocker2019",
   "location": "westeurope",
   "managedBy": null,
   "name": "rg-devopswithdocker2019",
@@ -89,12 +160,21 @@ UNC paths are not supported.  Defaulting to Windows directory.[179X[179C
   "tags": null,
   "type": "Microsoft.Resources/resourceGroups"
 }
-[0mAAD role propagation done[############################################]  100.0000%[K - Starting ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Running ..[K - Finished ..[K{
+[0m+ az aks create --resource-group rg-devopswithdocker2019 --name aks-devopswithdocker2019 --enable-addons monitoring --kubernetes-version 1.17.0 --generate-ssh-keys --location westeurope
+
+Finished service principal creation[##################################]  100.0000%
+AAD role propagation done[############################################]  100.0000%
+[K - Starting ..
+
+
+[K - Finished ..
+
+[K{
   "aadProfile": null,
   "addonProfiles": {
     "omsagent": {
       "config": {
-        "logAnalyticsWorkspaceResourceID": "/subscriptions/90770ece-195c-4c66-b939-887b721beaa1/resourcegroups/defaultresourcegroup-weu/providers/microsoft.operationalinsights/workspaces/defaultworkspace-90770ece-195c-4c66-b939-887b721beaa1-weu"
+        "logAnalyticsWorkspaceResourceID": "/subscriptions/XXXXXXXXXXXXXXX/resourcegroups/defaultresourcegroup-weu/providers/microsoft.operationalinsights/workspaces/defaultworkspace-XXXXXXXXXXXXXXX-weu"
       },
       "enabled": true
     }
@@ -122,11 +202,11 @@ UNC paths are not supported.  Defaulting to Windows directory.[179X[179C
     }
   ],
   "apiServerAccessProfile": null,
-  "dnsPrefix": "aks-devops-rg-devopswithdoc-90770e",
+  "dnsPrefix": "aks-devops-rg-devopswithdoc-b9b3fb",
   "enablePodSecurityPolicy": null,
   "enableRbac": true,
-  "fqdn": "aks-devops-rg-devopswithdoc-90770e-71f8976f.hcp.westeurope.azmk8s.io",
-  "id": "/subscriptions/90770ece-195c-4c66-b939-887b721beaa1/resourcegroups/rg-devopswithdocker2019/providers/Microsoft.ContainerService/managedClusters/aks-devopswithdocker2019",
+  "fqdn": "aks-devops-rg-devopswithdoc-b9b3fb-caeed3d7.hcp.westeurope.azmk8s.io",
+  "id": "/subscriptions/XXXXXXXXXXXXXXX/resourcegroups/rg-devopswithdocker2019/providers/Microsoft.ContainerService/managedClusters/aks-devopswithdocker2019",
   "identity": null,
   "kubernetesVersion": "1.17.0",
   "linuxProfile": {
@@ -134,7 +214,7 @@ UNC paths are not supported.  Defaulting to Windows directory.[179X[179C
     "ssh": {
       "publicKeys": [
         {
-          "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE4DyyxxGgsezf5CCXiOLjK0+CiwTIMQMMEntQBXz/bBnkkH5TgSjn/fxMkOXIarbIsbESXOAJSPMyGQe8B2O8Mwvthd3psyh1OLYKQtuLwY3g42HyfxKSnmKiNp5N0Cf53C0CGk4IdgDim6E1tYr3J4oXjXAolvdIwnvezUC2fVuwemUj+TNAYp4ODlceuBqtBFMxXj2elIRSAlcvXMmCKqaAzh393d8hai1wFdMoJn+7J64MCkb14h+UH9f6fgu3zE4DQKxWVDaBXTwGdDO4mibp2BZGfBR6g4BpLhWQSIWCNEJ3iFE5iQSkEInusu2Y8gaZcSt0AfbefdwWelZr jouko@JoukonKotikone\n"
+          "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE4DyyxxGgsezf5CCXiOLjK0+CiwTIMQMMEntQBXz/bBnkkH5TgSjn/fxMkOXIarbIsbESXOAJSPMyGQe8B2O8Mwvthd3psyh1OLYKQtuLwY3g42HyfxKSnmKiNp5N0Cf53C0CGk4IdgDim6E1tYr3J4oXjXAolvdIwnvezUC2fVuwemUj+TNAYp4ODlceuBqtBFMxXj2elIRSAlcvXMmCKqaAzh393d8hai1wFdMoJn+7J64MCkb14h+UH9f6fgu3zE4DQKxWVDaBXTwGdDO4mibp2BZGfBR6g4BpLhWQSIWCNEJ3iFE5iQSkEInusu2Y8gaZcSt0AfbefdwWelZr XXXXXXXXXXXXXXX\n"
         }
       ]
     }
@@ -148,7 +228,7 @@ UNC paths are not supported.  Defaulting to Windows directory.[179X[179C
     "loadBalancerProfile": {
       "effectiveOutboundIps": [
         {
-          "id": "/subscriptions/90770ece-195c-4c66-b939-887b721beaa1/resourceGroups/MC_rg-devopswithdocker2019_aks-devopswithdocker2019_westeurope/providers/Microsoft.Network/publicIPAddresses/16f66b42-896f-4da2-b307-0b860ccaeec8",
+          "id": "/subscriptions/XXXXXXXXXXXXXXX/resourceGroups/MC_rg-devopswithdocker2019_aks-devopswithdocker2019_westeurope/providers/Microsoft.Network/publicIPAddresses/22c7813d-42e3-4c4a-8ad9-0242a46f0e04",
           "resourceGroup": "MC_rg-devopswithdocker2019_aks-devopswithdocker2019_westeurope"
         }
       ],
@@ -170,107 +250,167 @@ UNC paths are not supported.  Defaulting to Windows directory.[179X[179C
   "provisioningState": "Succeeded",
   "resourceGroup": "rg-devopswithdocker2019",
   "servicePrincipalProfile": {
-    "clientId": "fcfb67e1-7a59-4dfb-90b6-df12e3e827fa",
+    "clientId": "8a674345-18d0-404d-9fa3-2e2b04759c68",
     "secret": null
   },
   "tags": null,
   "type": "Microsoft.ContainerService/ManagedClusters",
   "windowsProfile": null
 }
-[0mA different object named aks-devopswithdocker2019 already exists in your kubeconfig file.
-Overwrite? (y/n): y
-A different object named clusterUser_rg-devopswithdocker2019_aks-devopswithdocker2019 already exists in your kubeconfig file.
-Overwrite? (y/n): y
+[0m+ az aks install-cli
+[33mDownloading client to "/usr/local/bin/kubectl" from "https://storage.googleapis.com/kubernetes-release/release/v1.17.1/bin/linux/amd64/kubectl"[0m
+[33mPlease ensure that /usr/local/bin is in your search PATH, so the `kubectl` command can be found.[0m
+[0m+ az aks get-credentials --resource-group rg-devopswithdocker2019 --name aks-devopswithdocker2019
 [33m/home/jouko/.kube/config has permissions "777".
 It should be readable and writable only by its owner.[0m
 Merged "aks-devopswithdocker2019" as current context in /home/jouko/.kube/config
-[0mNAME                                STATUS   ROLES   AGE     VERSION
-aks-nodepool1-28525836-vmss000000   Ready    agent   6m49s   v1.17.0
-aks-nodepool1-28525836-vmss000001   Ready    agent   6m49s   v1.17.0
-aks-nodepool1-28525836-vmss000002   Ready    agent   6m45s   v1.17.0
-redis uses an image, skipping
-postgres uses an image, skipping
-Building backend-example-docker  ... 
-Building frontend-example-docker ... 
-Building nginxservice            ... 
-Building backend-example-docker
-Building frontend-example-docker
-Building nginxservice
+[0m+ kubectl get nodes
+NAME                                STATUS   ROLES   AGE     VERSION
+aks-nodepool1-16828242-vmss000000   Ready    agent   2m42s   v1.17.0
+aks-nodepool1-16828242-vmss000001   Ready    agent   3m12s   v1.17.0
+aks-nodepool1-16828242-vmss000002   Ready    agent   3m9s    v1.17.0
++ REGISTER=joukorintamaki
++ EXERCISE=3.08a
++ mkdir -p 3.08a
++ TAG=backend-example-docker
++ FOLDER=3.08a/backend-example-docker
++ PORT=8000
++ mkdir -p 3.08a/backend-example-docker
++ cat
++ docker build --tag joukorintamaki/backend-example-docker 3.08a/backend-example-docker
+Sending build context to Docker daemon  2.048kB
+
+
 Step 1/6 : FROM node:alpine
  ---> 364fb8e7f28a
 Step 2/6 : ENV FRONT_URL=http://localhost
  ---> Using cache
- ---> 8be01f98fb19
+ ---> 19f9a943cddc
 Step 3/6 : RUN apk add --no-cache git &&  mkdir -p /usr/src/backend-example-docker &&  git clone https://github.com/docker-hy/backend-example-docker /usr/src/backend-example-docker &&  cd /usr/src/backend-example-docker &&  npm install &&  apk del git
  ---> Using cache
- ---> 2493434ea764
+ ---> a6607c6f75ae
 Step 4/6 : WORKDIR /usr/src/backend-example-docker
  ---> Using cache
- ---> 1f76cfa64083
+ ---> 59d85ed2e3cf
 Step 5/6 : EXPOSE 8000
  ---> Using cache
- ---> ab5c91d783aa
+ ---> a3e2752245ed
 Step 6/6 : CMD ["npm","start"]
  ---> Using cache
- ---> 89cc01cfad7e
-Successfully built 89cc01cfad7e
+ ---> 236139fb90fb
+Successfully built 236139fb90fb
 Successfully tagged joukorintamaki/backend-example-docker:latest
-[3A[2KBuilding backend-example-docker  ... [32mdone[0m[3BStep 1/2 : FROM nginx:alpine
- ---> 36189e6707f4
-Step 2/2 : COPY nginx.conf /etc/nginx/nginx.conf
- ---> Using cache
- ---> af9997352b46
-Successfully built af9997352b46
++ docker push joukorintamaki/backend-example-docker
+The push refers to repository [docker.io/joukorintamaki/backend-example-docker]
+
+[1A[2K
+391752a59554: Preparing 
+[1B
+[1A[2K
+6595575b972f: Preparing 
+[1B
+[1A[2K
+658b36707bef: Preparing 
+[1B
+[1A[2K
+93902f31b09c: Preparing 
+[1B
+[1A[2K
+6b27de954cca: Preparing 
+[1B[2A[2K
+93902f31b09c: Layer already exists 
+[2B[4A[2K
+6595575b972f: Layer already exists 
+[4B[3A[2K
+658b36707bef: Layer already exists 
+[3B[5A[2K
+391752a59554: Layer already exists 
+[5B[1A[2K
+6b27de954cca: Layer already exists 
+[1Blatest: digest: sha256:0fd0098f1b27ee488d2f67729c0d3fd267d263889a3fc2cec32e0c38420e12d7 size: 1370
++ TAG=frontend-example-docker
++ FOLDER=3.08a/frontend-example-docker
++ PORT=5000
++ mkdir -p 3.08a/frontend-example-docker
++ cat
++ docker build --tag joukorintamaki/frontend-example-docker 3.08a/frontend-example-docker
+Sending build context to Docker daemon  2.048kB
+
+
 Step 1/6 : FROM node:alpine
  ---> 364fb8e7f28a
 Step 2/6 : ENV API_URL=http://localhost:8000
  ---> Using cache
- ---> aa2f4bc804f6
+ ---> 0b845c4ed918
 Step 3/6 : RUN apk add --no-cache git &&  mkdir -p /usr/src/frontend-example-docker &&  git clone https://github.com/docker-hy/frontend-example-docker /usr/src/frontend-example-docker &&  cd /usr/src/frontend-example-docker &&  npm install &&  apk del git
-Successfully tagged joukorintamaki/nginxservice:latest
  ---> Using cache
- ---> 2b861737d6fe
+ ---> 03b698fd4494
 Step 4/6 : WORKDIR /usr/src/frontend-example-docker
  ---> Using cache
- ---> 73bf71793eb6
-[1A[2KStep 5/6 : EXPOSE 5000Building nginxservice            ... [32mdone[0m
+ ---> 31466ee39649
+Step 5/6 : EXPOSE 5000
  ---> Using cache
- ---> 40a38d168e63
-Step 6/6 : CMD ["npm","start"][1B
+ ---> de5ef4d3dce4
+Step 6/6 : CMD ["npm","start"]
  ---> Using cache
- ---> e41c9d43914f
-Successfully built e41c9d43914f
+ ---> 507eb9c6f6bc
+Successfully built 507eb9c6f6bc
 Successfully tagged joukorintamaki/frontend-example-docker:latest
-[2A[2KBuilding frontend-example-docker ... [32mdone[0m[2BPushing backend-example-docker (joukorintamaki/backend-example-docker:latest)...
-[2KThe push refers to repository [docker.io/joukorintamaki/backend-example-docker]
++ docker push joukorintamaki/frontend-example-docker
+The push refers to repository [docker.io/joukorintamaki/frontend-example-docker]
 
-[1A[2K9f9cc7d5fb4f: Preparing[1B
-[1A[2K6595575b972f: Preparing[1B
-[1A[2K658b36707bef: Preparing[1B
-[1A[2K93902f31b09c: Preparing[1B
-[1A[2K6b27de954cca: Preparing[1B[2A[2K93902f31b09c: Layer already exists[2B[3A[2K658b36707bef: Layer already exists[3B[5A[2K9f9cc7d5fb4f: Layer already exists[5B[4A[2K6595575b972f: Layer already exists[4B[1A[2K6b27de954cca: Layer already exists[1B[2Klatest: digest: sha256:70eea40a99b8dc5d81e26a8de8bd20bacc8540e22448419495eee00a524d3bc9 size: 1370
-Pushing frontend-example-docker (joukorintamaki/frontend-example-docker:latest)...
-[2KThe push refers to repository [docker.io/joukorintamaki/frontend-example-docker]
+[1A[2K
+9b88df8ee1d6: Preparing 
+[1B
+[1A[2K
+6595575b972f: Preparing 
+[1B
+[1A[2K
+658b36707bef: Preparing 
+[1B
+[1A[2K
+93902f31b09c: Preparing 
+[1B
+[1A[2K
+6b27de954cca: Preparing 
+[1B[5A[2K
+9b88df8ee1d6: Layer already exists 
+[5B[1A[2K
+6b27de954cca: Layer already exists 
+[1B[2A[2K
+93902f31b09c: Layer already exists 
+[2B[4A[2K
+6595575b972f: Layer already exists 
+[4B[3A[2K
+658b36707bef: Layer already exists 
+[3Blatest: digest: sha256:1e40a0e7dd9c20635e0084d9b12800ab2d760e60ac4246b26f5b41722a340edd size: 1370
++ cat
 
-[1A[2K9b1aa7a013be: Preparing[1B
-[1A[2K6595575b972f: Preparing[1B
-[1A[2K658b36707bef: Preparing[1B
-[1A[2K93902f31b09c: Preparing[1B
-[1A[2K6b27de954cca: Preparing[1B[3A[2K658b36707bef: Layer already exists[3B[4A[2K6595575b972f: Layer already exists[4B[1A[2K6b27de954cca: Layer already exists[1B[5A[2K9b1aa7a013be: Layer already exists[5B[2A[2K93902f31b09c: Layer already exists[2B[2Klatest: digest: sha256:a045496267168596b4c307d919387f1c103b3174331497bc52555771c72e87d2 size: 1370
-Pushing nginxservice (joukorintamaki/nginxservice:latest)...
-[2KThe push refers to repository [docker.io/joukorintamaki/nginxservice]
+kubectl apply -f deploy.yaml
+deployment.apps/frontend-example-docker created
+deployment.apps/backend-example-docker created
+service/frontend-example-docker created
+service/backend-example-docker created
 
-[1A[2Kc3e905807011: Preparing[1B
-[1A[2K671c8a3d8285: Preparing[1B
-[1A[2K77cae8ab23bf: Preparing[1B[2A[2K671c8a3d8285: Layer already exists[2B[1A[2K77cae8ab23bf: Layer already exists[1B[3A[2Kc3e905807011: Layer already exists[3B[2Klatest: digest: sha256:c212988113bbd9d8ff27386c20d18611b2d82e98b9479e09206ed17a0e7f9578 size: 946
-REPOSITORY                               TAG                 IMAGE ID            CREATED             SIZE
-joukorintamaki/frontend-example-docker   latest              e41c9d43914f        33 minutes ago      268MB
-joukorintamaki/backend-example-docker    latest              89cc01cfad7e        33 minutes ago      171MB
-joukorintamaki/nginxservice              latest              af9997352b46        35 minutes ago      21.5MB
-nginx                                    alpine              36189e6707f4        2 days ago          21.5MB
-node                                     alpine              364fb8e7f28a        3 days ago          112MB
-redis                                    alpine              8af6a13284bf        9 days ago          33MB
-postgres                                 alpine              c8abd8e13a5c        5 weeks ago         146MB
-docker stack deploy --orchestrator=kubernetes --compose-file docker-compose.yml devopswithdocker2019
+sleep 10m
 
-Script done on 2020-01-12 11:37:00+0200
+kubectl get deployments,pods,services,endpoints -o wide
+NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS                IMAGES                                   SELECTOR
+deployment.apps/backend-example-docker    1/1     1            1           21m   backend-example-docker    joukorintamaki/backend-example-docker    app=backend-example-docker
+deployment.apps/frontend-example-docker   1/1     1            1           21m   frontend-example-docker   joukorintamaki/frontend-example-docker   app=frontend-example-docker
+
+NAME                                           READY   STATUS    RESTARTS   AGE     IP           NODE                                NOMINATED NODE   READINESS GATES
+pod/backend-example-docker-6c965875c6-tzkqb    1/1     Running   0          3m29s   10.244.0.8   aks-nodepool1-16828242-vmss000001   <none>           <none>
+pod/frontend-example-docker-695d554d88-664lk   1/1     Running   0          3m30s   10.244.2.6   aks-nodepool1-16828242-vmss000000   <none>           <none>
+
+NAME                              TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)          AGE   SELECTOR
+service/backend-example-docker    LoadBalancer   10.0.77.50    51.105.219.238   8000:31430/TCP   21m   app=backend-example-docker
+service/frontend-example-docker   LoadBalancer   10.0.235.35   51.105.219.38    80:31601/TCP     21m   app=frontend-example-docker
+service/kubernetes                ClusterIP      10.0.0.1      <none>           443/TCP          30m   <none>
+
+NAME                                ENDPOINTS           AGE
+endpoints/backend-example-docker    10.244.0.8:8000     21m
+endpoints/frontend-example-docker   10.244.2.6:5000     21m
+endpoints/kubernetes                51.105.135.73:443   30m
+
+Script done on 2020-01-15 21:38:46+0200
